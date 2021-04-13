@@ -3,10 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.AdministrativeRole;
+package ui.SystemAdminWorkArea;
 
+import ui.AdministrativeRole.*;
 import Business.Customer.Customer;
 import Business.Customer.CustomerDirectory;
+import Business.EcoSystem;
 
 import Business.Enterprise.Enterprise;
 import java.awt.CardLayout;
@@ -21,16 +23,16 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ManageCustomerJPanel extends javax.swing.JPanel {
     private JPanel userProcessContainer; 
-    private Enterprise enterprise; 
+    private EcoSystem ecosystem;
     private CustomerDirectory customerDirectory;
     /**
      * Creates new form ManageCustomerJPanel
      */
-    public ManageCustomerJPanel(JPanel userProcessContainer, Enterprise enterprise) {
+    public ManageCustomerJPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
-        this.enterprise = enterprise;
-        this.customerDirectory = enterprise.getCustomerdirectory();
+        this.ecosystem = ecosystem;
+        this.customerDirectory = ecosystem.getCustomerdirectory();
         populateTable();
     }
 
@@ -146,7 +148,7 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         // TODO add your handling code here:
-        CreateCustomerJPanel createCustomer = new CreateCustomerJPanel(userProcessContainer, enterprise);
+        CreateCustomerJPanel createCustomer = new CreateCustomerJPanel(userProcessContainer, ecosystem);
         userProcessContainer.add("CreateCustomersJPanel",createCustomer);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
@@ -160,7 +162,7 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
             return;
         }
         Customer customer = (Customer)tblCustomer.getValueAt(selectedRow,0);
-        ModifyCustomerJPanel modifyCustomer = new ModifyCustomerJPanel(userProcessContainer, enterprise, customerDirectory, customer);
+        ModifyCustomerJPanel modifyCustomer = new ModifyCustomerJPanel(userProcessContainer, ecosystem, customerDirectory, customer);
         userProcessContainer.add("ModifyCustomersJPanel",modifyCustomer);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
@@ -185,7 +187,8 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
-        AdminWorkAreaJPanel Adminwjp = (AdminWorkAreaJPanel) component;
+        SystemAdminWorkAreaJPanel sysAdminwjp = (SystemAdminWorkAreaJPanel) component;
+        //sysAdminwjp.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
 
@@ -205,7 +208,7 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
     private void populateTable() {
         DefaultTableModel dtm = (DefaultTableModel) tblCustomer.getModel();
         dtm.setRowCount(0);
-        for(Customer customer : enterprise.getCustomerdirectory().getCustomerDir()){
+        for(Customer customer : ecosystem.getCustomerdirectory().getCustomerDir()){
             Object [] row = new Object[6];
             row[0] = customer;
             row[1] = customer.getName();

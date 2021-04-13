@@ -8,20 +8,19 @@ package Business.Role;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
-import Business.Organization.ServiceOrganization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import ui.ServiceRole.ServiceWorkAreaJPanel;
+import ui.CleaningRole.CleaningWorkAreaJPanel;
 
 /**
  *
  * @author ameya
  */
-public class ServiceRole extends Role{
+public class CleaningRole extends Role{
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
-         return new ServiceWorkAreaJPanel(userProcessContainer, account, (ServiceOrganization)organization, enterprise);
+        return new CleaningWorkAreaJPanel(userProcessContainer, account, organization, enterprise, business);
     }
     
 }

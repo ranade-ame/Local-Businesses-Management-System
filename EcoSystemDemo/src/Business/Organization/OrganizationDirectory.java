@@ -33,8 +33,16 @@ public class OrganizationDirectory {
             organization = new LabOrganization();
             organizationList.add(organization);
         }
-        else if (type.getValue().equals(Type.Service.getValue())){
-            organization = new ServiceOrganization();
+        else if (type.getValue().equals(Type.Cleaning.getValue())){
+            organization = new CleaningOrganization();
+            organizationList.add(organization);
+        }
+        else if (type.getValue().equals(Type.Mechanic.getValue())){
+            organization = new MechanicOrganization();
+            organizationList.add(organization);
+        }
+        else if (type.getValue().equals(Type.Electrician.getValue())){
+            organization = new ElectricianOrganization();
             organizationList.add(organization);
         }
         
