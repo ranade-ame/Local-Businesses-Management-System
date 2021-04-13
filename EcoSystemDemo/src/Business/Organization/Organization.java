@@ -4,6 +4,7 @@
  */
 package Business.Organization;
 
+import Business.Customer.CustomerDirectory;
 import Business.Employee.EmployeeDirectory;
 import Business.Role.Role;
 import Business.UserAccount.UserAccountDirectory;
@@ -19,12 +20,13 @@ public abstract class Organization {
     private String name;
     private WorkQueue workQueue;
     private EmployeeDirectory employeeDirectory;
+    private CustomerDirectory customerdirectory;
     private UserAccountDirectory userAccountDirectory;
     private int organizationID;
-    private static int counter=0;
+    private int counter = 1;
     
     public enum Type{
-        Admin("Admin Organization"), Doctor("Doctor Organization"), Lab("Lab Organization");
+        Admin("Admin Organization"), Doctor("Doctor Organization"), Lab("Lab Organization"), Service("Service Organization");
         private String value;
         private Type(String value) {
             this.value = value;
@@ -39,8 +41,9 @@ public abstract class Organization {
         workQueue = new WorkQueue();
         employeeDirectory = new EmployeeDirectory();
         userAccountDirectory = new UserAccountDirectory();
+        customerdirectory = new CustomerDirectory();
         organizationID = counter;
-        ++counter;
+        counter++;
     }
 
     public abstract ArrayList<Role> getSupportedRole();
@@ -73,6 +76,17 @@ public abstract class Organization {
         this.workQueue = workQueue;
     }
 
+    public CustomerDirectory getCustomerdirectory() {
+        if(customerdirectory == null){
+            customerdirectory = new CustomerDirectory();
+        }
+        return customerdirectory;
+    }
+
+    public void setCustomerdirectory(CustomerDirectory customerdirectory) {
+        this.customerdirectory = customerdirectory;
+    }
+    
     @Override
     public String toString() {
         return name;
