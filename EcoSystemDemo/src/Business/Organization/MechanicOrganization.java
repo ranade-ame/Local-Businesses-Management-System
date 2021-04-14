@@ -5,24 +5,24 @@
  */
 package Business.Organization;
 
+import Business.Role.MechanicRole;
 import Business.Role.Role;
-import Business.Role.ServiceRole;
 import java.util.ArrayList;
 
 /**
  *
  * @author ameya
  */
-public class ServiceOrganization extends Organization{
+public class MechanicOrganization extends Organization{
 
-    public ServiceOrganization() {
-        super(Organization.Type.Service.getValue());
+    public MechanicOrganization() {
+        super(Organization.Type.Mechanic.getValue());
     }
 
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();
-        roles.add(new ServiceRole());
+        roles.add(new MechanicRole());
         return roles;
     }
     

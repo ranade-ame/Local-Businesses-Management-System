@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.AdministrativeRole;
+package ui.SystemAdminWorkArea;
 
+import ui.AdministrativeRole.*;
 import Business.Customer.Customer;
 import Business.Customer.CustomerDirectory;
 import Business.EcoSystem;
@@ -24,7 +25,7 @@ import javax.swing.JPanel;
 public class CreateCustomerJPanel extends javax.swing.JPanel {
     
     private JPanel userProcessContainer;
-    private Enterprise enterprise; 
+    private EcoSystem ecosystem; 
     private Employee employee;
     private Customer customer;
     private CustomerDirectory customerdirectory;
@@ -32,11 +33,11 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
     /**
      * Creates new form CreateCustomerJPanel
      */
-    public CreateCustomerJPanel(JPanel userProcessContainer, Enterprise enterprise) {
+    public CreateCustomerJPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
-        this.enterprise = enterprise;
-        this.customerdirectory = enterprise.getCustomerdirectory();
+        this.ecosystem = ecosystem;
+        this.customerdirectory = ecosystem.getCustomerdirectory();
         
     }
 
@@ -265,7 +266,8 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
-        AdminWorkAreaJPanel sysAdminwjp = (AdminWorkAreaJPanel) component;
+        //SystemAdminWorkAreaJPanel sysAdminwjp = (SystemAdminWorkAreaJPanel) component;
+        //sysAdminwjp.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed
@@ -295,8 +297,8 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
 //        }
         
         
-        enterprise.getCustomerdirectory().newCustomer(tfFullName.getText(), tfPhoneNumber.getText(), parseInt(tfAge.getText()), tfAddress.getText(), tfEmail.getText(), tfUsername.getText(), tfPassword.getText());
-        enterprise.getUserAccountDirectory().createUserAccount(tfUsername.getText(), tfPassword.getText(), employee, new CustomerRole());
+        ecosystem.getCustomerdirectory().newCustomer(tfFullName.getText(), tfPhoneNumber.getText(), parseInt(tfAge.getText()), tfAddress.getText(), tfEmail.getText(), tfUsername.getText(), tfPassword.getText());
+        ecosystem.getUserAccountDirectory().createUserAccount(tfUsername.getText(), tfPassword.getText(), employee, new CustomerRole());
         JOptionPane.showMessageDialog(null,"Customer Created");
         
     }//GEN-LAST:event_btnCreateActionPerformed

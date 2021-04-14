@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.AdministrativeRole;
+package ui.SystemAdminWorkArea;
 
+import ui.AdministrativeRole.*;
 import Business.Customer.Customer;
 import Business.Customer.CustomerDirectory;
 import Business.EcoSystem;
@@ -20,16 +21,15 @@ import javax.swing.JPanel;
  */
 public class ModifyCustomerJPanel extends javax.swing.JPanel {
     private JPanel userProcessContainer;
-    private Enterprise enterprise;
+    private EcoSystem ecosystem;
     private Customer customer;
     private CustomerDirectory customerdirectory;
     /**
      * Creates new form ModifyCustomerJPanel
      */
-    public ModifyCustomerJPanel(JPanel userProcessContainer, Enterprise enterprise, CustomerDirectory customerdirectory, Customer customer) {
+    public ModifyCustomerJPanel(JPanel userProcessContainer, EcoSystem ecosystem, CustomerDirectory customerdirectory, Customer customer) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
-        this.enterprise = enterprise;
         this.customerdirectory = customerdirectory;
         this.customer = customer;
     }
@@ -209,8 +209,8 @@ public class ModifyCustomerJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
-        ManageCustomerJPanel mcjp = (ManageCustomerJPanel) component;
-        //mcjp.refreshTable();
+        SystemAdminWorkAreaJPanel sysAdminwjp = (SystemAdminWorkAreaJPanel) component;
+        //sysAdminwjp.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed

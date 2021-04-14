@@ -9,7 +9,7 @@ import Business.Customer.CustomerDirectory;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
-import Business.Organization.ServiceOrganization;
+
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 
