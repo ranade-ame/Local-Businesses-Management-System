@@ -13,21 +13,27 @@ public class Customer {
     private String name;
     private String phone;
     private int age;
-    private String address;
+    private String streetaddress;
+    private String country;
+    private String city;
+    private int zipcode;
     private String email;
     private String username;
     private String password;
     private int id;
     private static int count = 1000;
 
-    public Customer(String name, String phone, int age, String address, String email, String username, String password) {
+    public Customer(String name, String phone, int age, String streetaddress, String email, String username, String password, String country, String city, int zipcode) {
         this.name = name;
         this.phone = phone;
         this.age = age;
-        this.address = address;
+        this.streetaddress = streetaddress;
         this.email = email;
         this.username = username;
         this.password = password;
+        this.country = country;
+        this.city = city;
+        this.zipcode = zipcode;
         id = count;
         count++;
     }
@@ -80,12 +86,12 @@ public class Customer {
         this.age = age;
     }
 
-    public String getAddress() {
-        return address;
+    public String getStreetAddress() {
+        return streetaddress;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setStreetAddress(String streetaddress) {
+        this.streetaddress = streetaddress;
     }
 
     public String getUsername() {
@@ -95,7 +101,39 @@ public class Customer {
     public void setUsername(String username) {
         this.username = username;
     }
-    
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public int getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(int zipcode) {
+        this.zipcode = zipcode;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    public static void setCount(int count) {
+        Customer.count = count;
+    }
+
     @Override
     public String toString() {
         return username;

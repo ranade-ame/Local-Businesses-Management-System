@@ -45,10 +45,37 @@ public class OrganizationDirectory {
             organization = new ElectricianOrganization();
             organizationList.add(organization);
         }
+        else if (type.getValue().equals(Type.Wholesale.getValue())){
+            organization = new WholesaleOrganization();
+            organizationList.add(organization);
+        }
         else if (type.getValue().equals(Type.Plumbing.getValue())){
             organization = new PlumbingOrganization();
             organizationList.add(organization);
         }
+        else if (type.getValue().equals(Type.Suppliers.getValue())){
+            organization = new SuppliersOrganization();
+            organizationList.add(organization);
+        }
+        else if (type.getValue().equals(Type.Vendors.getValue())){
+            organization = new VendorsOrganization();
+            organizationList.add(organization);
+        }
+        else if (type.getValue().equals(Type.Delivery.getValue())){
+            organization = new DeliveryOrganization();
+            organizationList.add(organization);
+        }
+        else if (type.getValue().equals(Type.Factories.getValue())){
+            organization = new FactoriesOrganization();
+            organizationList.add(organization);
+        }
+        else if (type.getValue().equals(Type.Transport.getValue())){
+            organization = new TransportOrganization();
+            organizationList.add(organization);
+        }
+        
+       
+        
         
         return organization;
     }
