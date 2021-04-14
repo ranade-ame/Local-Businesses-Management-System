@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.PlumbingRole;
+package ui.FactoriesRole;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
@@ -13,14 +13,14 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author ameya
+ * @author abhishek <your.name at your.org>
  */
-public class PlumbingWorkAreaJPanel extends javax.swing.JPanel {
+public class FactoriesWorkAreaJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form PlumbingWorkAreaJPanel
+     * Creates new form FactoriesWorkAreaJPanel
      */
-    public PlumbingWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
+    public FactoriesWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
     }
 
