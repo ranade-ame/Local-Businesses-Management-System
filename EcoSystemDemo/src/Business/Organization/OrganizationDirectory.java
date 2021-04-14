@@ -61,6 +61,12 @@ public class OrganizationDirectory {
             organization = new VendorsOrganization();
             organizationList.add(organization);
         }
+        else if (type.getValue().equals(Type.Delivery.getValue())){
+            organization = new DeliveryOrganization();
+            organizationList.add(organization);
+        }
+        
+       
         
         
         return organization;

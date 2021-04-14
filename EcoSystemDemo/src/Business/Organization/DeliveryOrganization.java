@@ -5,25 +5,25 @@
  */
 package Business.Organization;
 
+import Business.Role.DeliveryRole;
 import Business.Role.Role;
-import Business.Role.VendorsRole;
 import java.util.ArrayList;
 
 /**
  *
  * @author abhishek <your.name at your.org>
  */
-public class VendorsOrganization extends Organization {
-    public VendorsOrganization(){
-        super(Organization.Type.Vendors.getValue());
+public class DeliveryOrganization extends Organization {
+    public DeliveryOrganization(){
+        super(Organization.Type.Delivery.getValue());
     }
+    
 
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();
-        roles.add(new VendorsRole());
+        roles.add(new DeliveryRole());
         return roles;
     }
-    
     
 }
