@@ -14,8 +14,8 @@ import java.util.ArrayList;
  */
 public class AdminOrganization extends Organization{
 
-    public AdminOrganization() {
-        super(Type.Admin.getValue());
+    public AdminOrganization(String name, String streetaddress, String city, String country, int zipcode) {
+        super(Type.Admin.getValue(), name, streetaddress, city, country, zipcode);
     }
     
     @Override
