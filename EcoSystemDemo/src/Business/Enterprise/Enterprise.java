@@ -15,6 +15,11 @@ import Business.Organization.OrganizationDirectory;
 public abstract class Enterprise extends Organization{
     
     private EnterpriseType enterpriseType;
+    private String name;
+    private String streetaddress;
+    private String country;
+    private String city;
+    private int zipcode;
     private OrganizationDirectory organizationDirectory;
 
     public OrganizationDirectory getOrganizationDirectory() {
@@ -34,7 +39,7 @@ public abstract class Enterprise extends Organization{
         @Override
         public String toString(){
         return value;
-    }
+        }
     }
 
     public EnterpriseType getEnterpriseType() {
@@ -45,9 +50,14 @@ public abstract class Enterprise extends Organization{
         this.enterpriseType = enterpriseType;
     }
     
-    public Enterprise(String name,EnterpriseType type){
-        super(name);
+    public Enterprise(EnterpriseType type, String name, String streetaddress, String city, String country, int zipcode){
+        super(type.toString(), name, streetaddress, city, country, zipcode);
         this.enterpriseType=type;
+        this.name = name;
+        this.streetaddress = streetaddress;
+        this.city = city;
+        this.country = country;
+        this.zipcode = zipcode;
         organizationDirectory=new OrganizationDirectory();
     }
 }

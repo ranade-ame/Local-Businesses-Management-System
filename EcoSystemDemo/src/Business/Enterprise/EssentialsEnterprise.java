@@ -13,8 +13,8 @@ import java.util.ArrayList;
  * @author abhishek <your.name at your.org>
  */
 public class EssentialsEnterprise extends Enterprise{
-    public EssentialsEnterprise(String name){
-        super(name,EnterpriseType.Essentials);
+    public EssentialsEnterprise(String name, String streetaddress, String city, String country, int zipcode){
+        super(EnterpriseType.Essentials, name, streetaddress, city, country, zipcode);
         
     }
         

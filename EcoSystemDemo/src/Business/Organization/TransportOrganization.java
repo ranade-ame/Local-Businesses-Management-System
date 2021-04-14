@@ -14,8 +14,8 @@ import java.util.ArrayList;
  * @author abhishek <your.name at your.org>
  */
 public class TransportOrganization extends Organization{
-    public TransportOrganization(){
-        super(Organization.Type.Transport.getValue());
+    public TransportOrganization(String name, String streetaddress, String city, String country, int zipcode){
+        super(Organization.Type.Transport.getValue(), name, streetaddress, city, country, zipcode);
     }
 
     @Override

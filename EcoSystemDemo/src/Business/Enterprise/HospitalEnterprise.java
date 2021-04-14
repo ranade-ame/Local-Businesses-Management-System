@@ -14,8 +14,8 @@ import java.util.ArrayList;
  */
 public class HospitalEnterprise extends Enterprise {
     
-    public HospitalEnterprise(String name){
-        super(name,EnterpriseType.Hospital);
+    public HospitalEnterprise(String name, String streetaddress, String city, String country, int zipcode){
+        super(EnterpriseType.Hospital, name, streetaddress, city, country, zipcode);
     }
     @Override
     public ArrayList<Role> getSupportedRole() {
