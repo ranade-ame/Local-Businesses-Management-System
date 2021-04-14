@@ -5,26 +5,23 @@
  */
 package Business.Role;
 
-import Business.Customer.CustomerDirectory;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.Organization.ServiceOrganization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import ui.CustomerRole.CustomerWorkAreaJPanel;
+import ui.ServiceRole.ServiceWorkAreaJPanel;
 
 /**
  *
  * @author ameya
  */
-public class CustomerRole extends Role{
+public class ServiceRole extends Role{
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
-        return new CustomerWorkAreaJPanel(userProcessContainer, account, organization, enterprise, business);
+         return new ServiceWorkAreaJPanel(userProcessContainer, account, (ServiceOrganization)organization, enterprise);
     }
     
-    
-
 }
