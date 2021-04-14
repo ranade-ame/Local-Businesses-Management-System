@@ -65,6 +65,14 @@ public class OrganizationDirectory {
             organization = new DeliveryOrganization();
             organizationList.add(organization);
         }
+        else if (type.getValue().equals(Type.Factories.getValue())){
+            organization = new FactoriesOrganization();
+            organizationList.add(organization);
+        }
+        else if (type.getValue().equals(Type.Transport.getValue())){
+            organization = new TransportOrganization();
+            organizationList.add(organization);
+        }
         
        
         

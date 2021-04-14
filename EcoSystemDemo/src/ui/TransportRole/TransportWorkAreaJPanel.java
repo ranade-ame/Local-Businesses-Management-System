@@ -3,18 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.PlumbingRole;
+package ui.TransportRole;
+
+import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
+import Business.Organization.Organization;
+import Business.UserAccount.UserAccount;
+import javax.swing.JPanel;
 
 /**
  *
- * @author ameya
+ * @author abhishek <your.name at your.org>
  */
-public class PlumbingRequestAreaJPanel extends javax.swing.JPanel {
+public class TransportWorkAreaJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form PlumbingRequestAreaJPanel
+     * Creates new form TransportWorkAreaJPanel
      */
-    public PlumbingRequestAreaJPanel() {
+    public TransportWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
     }
 
