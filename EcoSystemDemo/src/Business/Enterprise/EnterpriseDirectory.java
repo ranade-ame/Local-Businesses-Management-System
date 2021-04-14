@@ -39,6 +39,10 @@ public class EnterpriseDirectory {
             enterprise = new ServiceEnterprise(name);
             enterpriseList.add(enterprise);
         }
+        else if(type==Enterprise.EnterpriseType.Essentials){
+            enterprise = new EssentialsEnterprise(name);
+            enterpriseList.add(enterprise);
+        }
         
         return enterprise;
     }
