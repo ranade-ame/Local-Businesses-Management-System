@@ -45,6 +45,10 @@ public class OrganizationDirectory {
             organization = new ElectricianOrganization();
             organizationList.add(organization);
         }
+        else if (type.getValue().equals(Type.Plumbing.getValue())){
+            organization = new PlumbingOrganization();
+            organizationList.add(organization);
+        }
         
         return organization;
     }
