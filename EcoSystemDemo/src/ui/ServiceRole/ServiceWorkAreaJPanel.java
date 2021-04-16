@@ -8,7 +8,7 @@ package ui.ServiceRole;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
-import Business.Organization.ServiceOrganization;
+
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.LabTestWorkRequest;
 import Business.WorkQueue.WorkRequest;
@@ -24,19 +24,19 @@ public class ServiceWorkAreaJPanel extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private EcoSystem business;
     private UserAccount userAccount;
-    private ServiceOrganization organization;
+    private Organization organization;
     
     /**
      * Creates new form ServiceWorkAreaJPanel
      */
 
-    public ServiceWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, ServiceOrganization serviceOrganization, Enterprise enterprise) {
+    public ServiceWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization Organization, Enterprise enterprise) {
         initComponents();
         
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
         this.business = business;
-        this.organization = serviceOrganization;
+        this.organization = organization;
         valueLabel.setText(enterprise.getName());
         
         
