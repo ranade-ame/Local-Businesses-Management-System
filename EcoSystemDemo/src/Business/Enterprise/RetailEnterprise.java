@@ -13,8 +13,8 @@ import java.util.ArrayList;
  * @author abhishek <your.name at your.org>
  */
 public class RetailEnterprise extends Enterprise{
-    public RetailEnterprise(String name, String streetaddress, String city, String country, int zipcode) {
-    super(EnterpriseType.Retail, name, streetaddress, city, country, zipcode);
+    public RetailEnterprise(String name) {
+    super(name,EnterpriseType.Retail);
     }
     @Override
     public ArrayList<Role> getSupportedRole() {

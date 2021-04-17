@@ -50,12 +50,6 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
-                      <Component id="jLabel6" min="-2" pref="91" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                      <Component id="tfStreetAddress" min="-2" pref="131" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
                       <Component id="jLabel7" min="-2" pref="91" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Component id="tfUsername" min="-2" pref="131" max="-2" attributes="0"/>
@@ -68,6 +62,12 @@
                           <Component id="btnCreate" max="32767" attributes="0"/>
                           <Component id="tfPassword" pref="131" max="32767" attributes="0"/>
                       </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                      <Component id="jLabel9" min="-2" pref="91" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="tfCountry" min="-2" pref="131" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
@@ -84,14 +84,14 @@
                               <Component id="tfCity" min="-2" pref="131" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="jLabel9" min="-2" pref="91" max="-2" attributes="0"/>
+                              <Component id="jLabel6" min="-2" pref="91" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="tfCountry" min="-2" pref="131" max="-2" attributes="0"/>
+                              <Component id="tfStreetAddress" min="-2" pref="131" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="246" max="32767" attributes="0"/>
+              <EmptySpace pref="273" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

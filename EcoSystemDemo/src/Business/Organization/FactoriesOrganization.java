@@ -14,9 +14,8 @@ import java.util.ArrayList;
  * @author abhishek <your.name at your.org>
  */
 public class FactoriesOrganization extends Organization {
-   
-    public FactoriesOrganization(String name, String streetaddress, String city, String country, int zipcode){
-        super(Organization.Type.Factories.getValue(), name, streetaddress, city, country, zipcode);
+    public FactoriesOrganization(){
+        super(Organization.Type.Factories.getValue());
     }
 
     @Override

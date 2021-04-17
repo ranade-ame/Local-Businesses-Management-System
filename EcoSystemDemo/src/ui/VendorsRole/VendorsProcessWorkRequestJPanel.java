@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.ServiceRole;
+package ui.VendorsRole;
 
 /**
  *
- * @author ameya
+ * @author abhishek <your.name at your.org>
  */
-public class ServiceRequestJPanel extends javax.swing.JPanel {
+public class VendorsProcessWorkRequestJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ServiceRequestJPanel
+     * Creates new form VendorsProcessWorkRequestJPanel
      */
-    public ServiceRequestJPanel() {
+    public VendorsProcessWorkRequestJPanel() {
         initComponents();
     }
 

@@ -15,8 +15,8 @@ import java.util.ArrayList;
  * @author abhishek <your.name at your.org>
  */
 public class WholesaleOrganization extends Organization {
-    public WholesaleOrganization(String name, String streetaddress, String city, String country, int zipcode){
-        super(Organization.Type.Wholesale.getValue(), name, streetaddress, city, country, zipcode);
+    public WholesaleOrganization(){
+        super(Organization.Type.Wholesale.getValue());
         
     }
 

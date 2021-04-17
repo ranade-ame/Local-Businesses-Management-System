@@ -15,8 +15,8 @@ import java.util.ArrayList;
  */
 public class MechanicOrganization extends Organization{
 
-    public MechanicOrganization(String name, String streetaddress, String city, String country, int zipcode) {
-        super(Organization.Type.Mechanic.getValue(), name, streetaddress, city, country, zipcode);
+    public MechanicOrganization() {
+        super(Organization.Type.Mechanic.getValue());
     }
 
     @Override
