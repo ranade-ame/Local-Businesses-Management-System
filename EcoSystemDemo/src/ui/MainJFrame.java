@@ -41,6 +41,7 @@ public class MainJFrame extends javax.swing.JFrame {
         // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
         private void initComponents() {
 
+                container = new javax.swing.JPanel();
                 jPanel3 = new javax.swing.JPanel();
                 loginJButton1 = new javax.swing.JButton();
                 userNameJTextField1 = new javax.swing.JTextField();
@@ -50,10 +51,12 @@ public class MainJFrame extends javax.swing.JFrame {
                 btnForgotPassword = new javax.swing.JButton();
                 btnNewRegister = new javax.swing.JButton();
                 lblTitle = new javax.swing.JLabel();
-                container = new javax.swing.JPanel();
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
                 getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+                container.setLayout(new java.awt.CardLayout());
+                getContentPane().add(container, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, -1, 470));
 
                 loginJButton1.setText("Login");
                 loginJButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +87,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 jPanel3Layout.setHorizontalGroup(
                         jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(154, 154, 154)
+                                .addGap(134, 134, 134)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,7 +108,7 @@ public class MainJFrame extends javax.swing.JFrame {
                                                         .addGap(111, 111, 111)
                                                         .addComponent(btnNewRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addGap(49, 49, 49))))
-                                .addContainerGap(154, Short.MAX_VALUE))
+                                .addContainerGap(174, Short.MAX_VALUE))
                 );
                 jPanel3Layout.setVerticalGroup(
                         jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,13 +130,10 @@ public class MainJFrame extends javax.swing.JFrame {
                                         .addComponent(btnForgotPassword))
                                 .addGap(18, 18, 18)
                                 .addComponent(btnNewRegister)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap(171, Short.MAX_VALUE))
                 );
 
                 getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 600, 460));
-
-                container.setLayout(new java.awt.CardLayout());
-                getContentPane().add(container, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, -1, 470));
 
                 pack();
         }// </editor-fold>//GEN-END:initComponents

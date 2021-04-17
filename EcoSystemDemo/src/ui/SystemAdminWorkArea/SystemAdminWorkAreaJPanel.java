@@ -5,18 +5,15 @@
  */
 package ui.SystemAdminWorkArea;
 
-import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
 import java.awt.CardLayout;
-import static java.time.Clock.system;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
-import ui.MainJFrame;
 
 /**
  *
@@ -96,7 +93,6 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageEnterprise = new javax.swing.JButton();
                 btnManageAdmin = new javax.swing.JButton();
                 manageCustomer = new javax.swing.JButton();
-                btnLogout = new javax.swing.JButton();
 
                 setLayout(new java.awt.BorderLayout());
 
@@ -152,13 +148,6 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                         }
                 });
 
-                btnLogout.setText("Logout");
-                btnLogout.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                btnLogoutActionPerformed(evt);
-                        }
-                });
-
                 javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
                 jPanel2.setLayout(jPanel2Layout);
                 jPanel2Layout.setHorizontalGroup(
@@ -176,9 +165,8 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                                                         .addComponent(btnManageAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                         .addComponent(btnManageEnterprise, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                         .addComponent(btnManageNetwork, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(manageCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                                .addContainerGap(295, Short.MAX_VALUE))
+                                                        .addComponent(manageCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addContainerGap(211, Short.MAX_VALUE))
                 );
 
                 jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnManageAdmin, btnManageEnterprise, btnManageNetwork});
@@ -198,9 +186,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                                 .addComponent(btnManageAdmin)
                                 .addGap(18, 18, 18)
                                 .addComponent(manageCustomer)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnLogout)
-                                .addContainerGap(115, Short.MAX_VALUE))
+                                .addContainerGap(160, Short.MAX_VALUE))
                 );
 
                 jSplitPane.setRightComponent(jPanel2);
@@ -245,30 +231,8 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_manageCustomerActionPerformed
 
-        private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-                // TODO add your handling code here:
-//		MainJFrame logout =new MainJFrame();
-//        userProcessContainer.add("logout",logout);
-//        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
-//        layout.next(userProcessContainer);
-		
-		MainJFrame login = new MainJFrame();
-		login.setVisible(true);
-		userProcessContainer.setVisible(false);
-		userProcessContainer.removeAll();
-		//userProcessContainer.disable();
-		
-		
-        
-		
-		
-		
-		
-        }//GEN-LAST:event_btnLogoutActionPerformed
-
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
-        private javax.swing.JButton btnLogout;
         private javax.swing.JButton btnManageAdmin;
         private javax.swing.JButton btnManageEnterprise;
         private javax.swing.JButton btnManageNetwork;
