@@ -5,17 +5,26 @@
  */
 package ui.WholesaleRole;
 
+import Business.WorkQueue.LabTestWorkRequest;
+import java.awt.CardLayout;
+import java.awt.Component;
+import javax.swing.JPanel;
+
 /**
  *
  * @author abhishek <your.name at your.org>
  */
 public class WholesaleProcessWorkRequestJPanel extends javax.swing.JPanel {
-
+    
+    JPanel userProcessContainer;
+    LabTestWorkRequest request;
     /**
      * Creates new form WholesaleProcessWorkRequestJPanel
      */
-    public WholesaleProcessWorkRequestJPanel() {
+    public WholesaleProcessWorkRequestJPanel(JPanel userProcessContainer, LabTestWorkRequest request) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.request = request;
     }
 
     /**
@@ -114,8 +123,8 @@ public class WholesaleProcessWorkRequestJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
-        LabAssistantWorkAreaJPanel dwjp = (LabAssistantWorkAreaJPanel) component;
-        dwjp.populateTable();
+        WholesaleWorkAreaJPanel dwjp = (WholesaleWorkAreaJPanel) component;
+        //dwjp.populateTable();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed

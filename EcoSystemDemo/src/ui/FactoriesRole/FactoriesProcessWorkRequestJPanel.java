@@ -5,17 +5,25 @@
  */
 package ui.FactoriesRole;
 
+import Business.WorkQueue.LabTestWorkRequest;
+import java.awt.CardLayout;
+import java.awt.Component;
+import javax.swing.JPanel;
+
 /**
  *
  * @author abhishek <your.name at your.org>
  */
 public class FactoriesProcessWorkRequestJPanel extends javax.swing.JPanel {
-
+    JPanel userProcessContainer;
+    LabTestWorkRequest request;
     /**
      * Creates new form FactoriesProcessWorkRequestJPanel
      */
-    public FactoriesProcessWorkRequestJPanel() {
+    public FactoriesProcessWorkRequestJPanel(JPanel userProcessContainer, LabTestWorkRequest request) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.request = request;
     }
 
     /**
@@ -114,8 +122,8 @@ public class FactoriesProcessWorkRequestJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
-        LabAssistantWorkAreaJPanel dwjp = (LabAssistantWorkAreaJPanel) component;
-        dwjp.populateTable();
+        FactoriesWorkAreaJPanel dwjp = (FactoriesWorkAreaJPanel) component;
+//        dwjp.populateTable();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed
