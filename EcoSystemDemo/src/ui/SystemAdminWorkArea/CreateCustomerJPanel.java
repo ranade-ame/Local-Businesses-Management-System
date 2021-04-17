@@ -59,7 +59,7 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
         tfAge = new javax.swing.JTextField();
         tfPhoneNumber = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        tfAddress = new javax.swing.JTextField();
+        tfStreetAddress = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         tfUsername = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -67,6 +67,12 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
         tfPassword = new javax.swing.JTextField();
         btnCreate = new javax.swing.JButton();
         backJButton = new javax.swing.JButton();
+        tfCountry = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        tfCity = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        tfZipcode = new javax.swing.JTextField();
 
         jLabel1.setText("Create Customer");
 
@@ -102,13 +108,13 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
 
         jLabel5.setText("Phone Number :");
 
-        tfAddress.addActionListener(new java.awt.event.ActionListener() {
+        tfStreetAddress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfAddressActionPerformed(evt);
+                tfStreetAddressActionPerformed(evt);
             }
         });
 
-        jLabel6.setText("Home Address :");
+        jLabel6.setText("Street Address:");
 
         tfUsername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +143,30 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
+            }
+        });
+
+        tfCountry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfCountryActionPerformed(evt);
+            }
+        });
+
+        jLabel9.setText("Country:");
+
+        jLabel10.setText("City:");
+
+        tfCity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfCityActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setText("Zipcode:");
+
+        tfZipcode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfZipcodeActionPerformed(evt);
             }
         });
 
@@ -175,7 +205,7 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
                         .addGap(162, 162, 162)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39)
-                        .addComponent(tfAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tfStreetAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(162, 162, 162)
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -187,7 +217,22 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
                         .addGap(39, 39, 39)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnCreate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(tfPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE))))
+                            .addComponent(tfPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(162, 162, 162)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(tfCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(162, 162, 162)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(tfCity, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(162, 162, 162)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(tfZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(246, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -216,7 +261,19 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(tfAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfStreetAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tfCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tfCity, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tfZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -225,9 +282,9 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
+                .addGap(18, 18, 18)
                 .addComponent(btnCreate)
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCreate, tfPassword});
@@ -250,9 +307,9 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfPhoneNumberActionPerformed
 
-    private void tfAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAddressActionPerformed
+    private void tfStreetAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfStreetAddressActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfAddressActionPerformed
+    }//GEN-LAST:event_tfStreetAddressActionPerformed
 
     private void tfUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfUsernameActionPerformed
         // TODO add your handling code here:
@@ -274,9 +331,28 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         // TODO add your handling code here:
-        //customer = new Customer(tfFullName.getText(), tfPhoneNumber.getText(), parseInt(tfAge.getText()), tfAddress.getText(), tfEmail.getText(), tfUsername.getText(), tfPassword.getText());
-        if(tfFullName.getText().isEmpty() || tfPhoneNumber.getText().isEmpty() || tfAddress.getText().isEmpty() || tfAge.getText().isEmpty() || tfEmail.getText().isEmpty() || tfPassword.getText().isEmpty() || tfUsername.getText().isEmpty()){
+        
+        String name = tfFullName.getText();
+        String phone = tfPhoneNumber.getText();
+        int age = parseInt(tfAge.getText());
+        String streetaddress = tfStreetAddress.getText();
+        String emailaddress = tfEmail.getText();
+        String country = tfCountry.getText();
+        String city = tfCity.getText();
+        int zipcode = parseInt(tfZipcode.getText());
+        String username = tfUsername.getText();
+        String password = tfPassword.getText();
+        
+        if(tfFullName.getText().isEmpty() || tfPhoneNumber.getText().isEmpty() || tfStreetAddress.getText().isEmpty() || tfAge.getText().isEmpty() || tfEmail.getText().isEmpty() || tfPassword.getText().isEmpty() || tfUsername.getText().isEmpty() || tfCountry.getText().isEmpty() || tfCity.getText().isEmpty() || tfZipcode.getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "Please fill the empty fields", "Warining", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        if(tfPhoneNumber.getText().length() != 10){
+            JOptionPane.showMessageDialog(null, "Phone Number must be 10 digits", "Warining", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        if(tfZipcode.getText().length() != 5){
+            JOptionPane.showMessageDialog(null, "Zip code must be 5 digits", "Warining", JOptionPane.WARNING_MESSAGE);
             return;
         }
         
@@ -289,25 +365,38 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
 //            JOptionPane.showMessageDialog(null, "Email Address must be in format of username@email.com");
 //            return;
 //        }
-//        
-//        for(Customer customer : business.getCustomerdirectory().getCustomerDir()) {
-//            if(customer.getEmail().equals(email)) {
-//                JOptionPane.showMessageDialog(null, "Email Address already exists");
-//            }
-//        }
+
+        for(Customer customer : ecosystem.getCustomerdirectory().getCustomerDir()) {
+            if(customer.getEmail().equals(emailaddress)) {
+                JOptionPane.showMessageDialog(null, "Email Address already exists");
+            }
+        }
         
-        
-        ecosystem.getCustomerdirectory().newCustomer(tfFullName.getText(), tfPhoneNumber.getText(), parseInt(tfAge.getText()), tfAddress.getText(), tfEmail.getText(), tfUsername.getText(), tfPassword.getText());
-        ecosystem.getUserAccountDirectory().createUserAccount(tfUsername.getText(), tfPassword.getText(), employee, new CustomerRole());
+        ecosystem.getCustomerdirectory().newCustomer(name, phone, age, streetaddress, emailaddress, username, password, country, city, zipcode);
+        ecosystem.getUserAccountDirectory().createUserAccount(username, password, employee, new CustomerRole());
         JOptionPane.showMessageDialog(null,"Customer Created");
         
     }//GEN-LAST:event_btnCreateActionPerformed
+
+    private void tfCountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCountryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfCountryActionPerformed
+
+    private void tfCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCityActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfCityActionPerformed
+
+    private void tfZipcodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfZipcodeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfZipcodeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
     private javax.swing.JButton btnCreate;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -315,12 +404,16 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JTextField tfAddress;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField tfAge;
+    private javax.swing.JTextField tfCity;
+    private javax.swing.JTextField tfCountry;
     private javax.swing.JTextField tfEmail;
     private javax.swing.JTextField tfFullName;
     private javax.swing.JTextField tfPassword;
     private javax.swing.JTextField tfPhoneNumber;
+    private javax.swing.JTextField tfStreetAddress;
     private javax.swing.JTextField tfUsername;
+    private javax.swing.JTextField tfZipcode;
     // End of variables declaration//GEN-END:variables
 }
