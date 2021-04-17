@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.MechanicRole;
+package ui.SuppliersRole;
 
 /**
  *
- * @author ameya
+ * @author abhishek <your.name at your.org>
  */
-public class MechanicWorkRequestJPanel extends javax.swing.JPanel {
+public class SuppliersProcessWorkRequestJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form MechanicWorkRequestJPanel
+     * Creates new form SuppliersProcessWorkRequestJPanel
      */
-    public MechanicWorkRequestJPanel() {
+    public SuppliersProcessWorkRequestJPanel() {
         initComponents();
     }
 
