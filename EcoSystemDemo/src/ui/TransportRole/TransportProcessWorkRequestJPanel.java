@@ -5,26 +5,17 @@
  */
 package ui.TransportRole;
 
-import Business.WorkQueue.LabTestWorkRequest;
-import java.awt.CardLayout;
-import java.awt.Component;
-import javax.swing.JPanel;
-import ui.LabAssistantRole.LabAssistantWorkAreaJPanel;
-
 /**
  *
  * @author abhishek <your.name at your.org>
  */
 public class TransportProcessWorkRequestJPanel extends javax.swing.JPanel {
-    JPanel userProcessContainer;
-    LabTestWorkRequest request;
+
     /**
      * Creates new form TransportProcessWorkRequestJPanel
      */
-    public TransportProcessWorkRequestJPanel(JPanel userProcessContainer, LabTestWorkRequest request) {
+    public TransportProcessWorkRequestJPanel() {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.request = request;
     }
 
     /**
@@ -123,8 +114,8 @@ public class TransportProcessWorkRequestJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
-        TransportWorkAreaJPanel dwjp = (TransportWorkAreaJPanel) component;
-        //dwjp.populateTable();
+        LabAssistantWorkAreaJPanel dwjp = (LabAssistantWorkAreaJPanel) component;
+        dwjp.populateTable();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed

@@ -5,22 +5,17 @@
  */
 package ui.CustomerRole;
 
-import javax.swing.JPanel;
-import java.awt.CardLayout;
-
 /**
  *
  * @author abhishek <your.name at your.org>
  */
 public class EssentialsOrderJPanel extends javax.swing.JPanel {
-    
-    private JPanel userProcessContainer;
+
     /**
      * Creates new form EssentialsOrderJPanel
      */
-    public EssentialsOrderJPanel(JPanel userProcessContainer) {
+    public EssentialsOrderJPanel() {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
     }
 
     /**
@@ -32,42 +27,19 @@ public class EssentialsOrderJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        backJButton = new javax.swing.JButton();
-
-        backJButton.setText("<< Back");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(backJButton)
-                .addContainerGap(320, Short.MAX_VALUE))
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(backJButton)
-                .addContainerGap(259, Short.MAX_VALUE))
+            .addGap(0, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
     // End of variables declaration//GEN-END:variables
 }
