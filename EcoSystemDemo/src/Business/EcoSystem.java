@@ -9,7 +9,6 @@ import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.Role.Role;
 import Business.Role.SystemAdminRole;
-import static java.lang.Integer.parseInt;
 import java.util.ArrayList;
 
 /**
@@ -39,7 +38,7 @@ public class EcoSystem extends Organization{
         return roleList;
     }
     private EcoSystem(){
-        super(null, null, null, null, null, parseInt(null));
+        super(null);
         networkList=new ArrayList<Network>();
     }
 

@@ -15,8 +15,8 @@ import java.util.ArrayList;
  */
 public class PlumbingOrganization extends Organization{
 
-    public PlumbingOrganization(String name, String streetaddress, String city, String country, int zipcode) {
-        super(Organization.Type.Plumbing.getValue(), name, streetaddress, city, country, zipcode);
+    public PlumbingOrganization() {
+        super(Organization.Type.Plumbing.getValue());
     }
 
     @Override

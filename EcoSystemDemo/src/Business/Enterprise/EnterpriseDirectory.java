@@ -29,26 +29,26 @@ public class EnterpriseDirectory {
     }
     
     //Create enterprise
-    public Enterprise createAndAddEnterprise(Enterprise.EnterpriseType type, String name, String streetaddress, String city, String country, int zipcode){
+    public Enterprise createAndAddEnterprise(String name,Enterprise.EnterpriseType type){
         Enterprise enterprise=null;
         if(type==Enterprise.EnterpriseType.Hospital){
-            enterprise=new HospitalEnterprise(name, streetaddress, city, country, zipcode);
+            enterprise=new HospitalEnterprise(name);
             enterpriseList.add(enterprise);
         }
         else if(type==Enterprise.EnterpriseType.Eateries){
-            enterprise = new EateriesEnterprise(name, streetaddress, city, country, zipcode);
+            enterprise = new EateriesEnterprise(name);
             enterpriseList.add(enterprise);
         }
         else if(type==Enterprise.EnterpriseType.Service){
-            enterprise = new ServiceEnterprise(name, streetaddress, city, country, zipcode);
+            enterprise = new ServiceEnterprise(name);
             enterpriseList.add(enterprise);
         }
         else if(type==Enterprise.EnterpriseType.Essentials){
-            enterprise = new EssentialsEnterprise(name, streetaddress, city, country, zipcode);
+            enterprise = new EssentialsEnterprise(name);
             enterpriseList.add(enterprise);
         }
         else if(type==Enterprise.EnterpriseType.Retail){
-            enterprise = new RetailEnterprise(name, streetaddress, city, country, zipcode);
+            enterprise = new RetailEnterprise(name);
             enterpriseList.add(enterprise);
         }
         

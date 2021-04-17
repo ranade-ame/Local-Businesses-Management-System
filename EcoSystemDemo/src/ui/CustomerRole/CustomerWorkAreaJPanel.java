@@ -11,7 +11,9 @@ import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 
 import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
 import javax.swing.JPanel;
+import ui.SystemAdminWorkArea.ManageEnterpriseAdminJPanel;
 
 /**
  *
@@ -46,10 +48,6 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
         valueLabel.setText(account.getUsername());
     }
 
-    
-
-    
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -59,6 +57,7 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< Updated upstream
         enterpriseLabel = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
 
@@ -67,20 +66,155 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
 
         valueLabel.setText("<value>");
 
+=======
+        jSplitPane1 = new javax.swing.JSplitPane();
+        jPanel1 = new javax.swing.JPanel();
+        valueLabel = new javax.swing.JLabel();
+        enterpriseLabel = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        btnEateriespanel = new javax.swing.JButton();
+        btnHouseholdServices = new javax.swing.JButton();
+        btnRetail = new javax.swing.JButton();
+        btnEssentials = new javax.swing.JButton();
+        lblorder = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+
+        jSplitPane1.setDividerLocation(200);
+
+        valueLabel.setText("<value>");
+
+        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        enterpriseLabel.setText("Hi");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(165, Short.MAX_VALUE)
+                .addComponent(enterpriseLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(valueLabel)
+                .addGap(161, 161, 161))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(valueLabel)
+                    .addComponent(enterpriseLabel))
+                .addContainerGap(417, Short.MAX_VALUE))
+        );
+
+        jSplitPane1.setRightComponent(jPanel1);
+
+        btnEateriespanel.setText("Eateries");
+        btnEateriespanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEateriespanelActionPerformed(evt);
+            }
+        });
+
+        btnHouseholdServices.setText("Household Services");
+        btnHouseholdServices.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHouseholdServicesActionPerformed(evt);
+            }
+        });
+
+        btnRetail.setText("Retail");
+        btnRetail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRetailActionPerformed(evt);
+            }
+        });
+
+        btnEssentials.setText("Essentials");
+        btnEssentials.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEssentialsActionPerformed(evt);
+            }
+        });
+
+        lblorder.setText("What would you like to buy today?");
+
+        jButton1.setText("Your Orders");
+
+        jButton2.setText("Track Your Orders");
+
+        jButton3.setText("Logout");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(lblorder))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(btnHouseholdServices, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnEateriespanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnRetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnEssentials, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(lblorder)
+                .addGap(37, 37, 37)
+                .addComponent(btnEateriespanel)
+                .addGap(28, 28, 28)
+                .addComponent(btnHouseholdServices)
+                .addGap(33, 33, 33)
+                .addComponent(btnRetail)
+                .addGap(33, 33, 33)
+                .addComponent(btnEssentials)
+                .addGap(30, 30, 30)
+                .addComponent(jButton1)
+                .addGap(26, 26, 26)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(21, 21, 21))
+        );
+
+        jSplitPane1.setLeftComponent(jPanel2);
+
+>>>>>>> Stashed changes
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<< Updated upstream
                 .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(474, Short.MAX_VALUE))
+=======
+                .addComponent(jSplitPane1)
+                .addContainerGap())
+>>>>>>> Stashed changes
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< Updated upstream
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -92,6 +226,60 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel enterpriseLabel;
+=======
+                .addContainerGap()
+                .addComponent(jSplitPane1)
+                .addContainerGap())
+        );
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void btnEateriespanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEateriespanelActionPerformed
+        // TODO add your handling code here:
+        EateriesJPanel eateriesJPanel=new EateriesJPanel(userProcessContainer);
+        userProcessContainer.add("eateriesJPanel",eateriesJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnEateriespanelActionPerformed
+
+    private void btnHouseholdServicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHouseholdServicesActionPerformed
+        // TODO add your handling code here:
+        HouseholdServicesJPanel householdservicesJPanel=new HouseholdServicesJPanel(userProcessContainer);
+        userProcessContainer.add("householdservicesJPanel",householdservicesJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnHouseholdServicesActionPerformed
+
+    private void btnRetailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetailActionPerformed
+        // TODO add your handling code here:
+        RetailJPanel retailJPanel=new RetailJPanel(userProcessContainer);
+        userProcessContainer.add("retailJPanel",retailJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnRetailActionPerformed
+
+    private void btnEssentialsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEssentialsActionPerformed
+        // TODO add your handling code here:
+        EssentialsJPanel essentialsJPanel=new EssentialsJPanel(userProcessContainer);
+        userProcessContainer.add("essentialsJPanel",essentialsJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnEssentialsActionPerformed
+
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEateriespanel;
+    private javax.swing.JButton btnEssentials;
+    private javax.swing.JButton btnHouseholdServices;
+    private javax.swing.JButton btnRetail;
+    private javax.swing.JLabel enterpriseLabel;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JLabel lblorder;
+>>>>>>> Stashed changes
     private javax.swing.JLabel valueLabel;
     // End of variables declaration//GEN-END:variables
 }
