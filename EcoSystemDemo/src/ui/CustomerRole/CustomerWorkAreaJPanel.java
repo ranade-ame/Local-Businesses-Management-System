@@ -71,7 +71,6 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                 lblorder = new javax.swing.JLabel();
                 jButton1 = new javax.swing.JButton();
                 jButton2 = new javax.swing.JButton();
-                jButton3 = new javax.swing.JButton();
 
                 jSplitPane1.setDividerLocation(200);
 
@@ -117,8 +116,6 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
 
                 jButton2.setText("Track Your Orders");
 
-                jButton3.setText("Logout");
-
                 javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
                 jPanel2.setLayout(jPanel2Layout);
                 jPanel2Layout.setHorizontalGroup(
@@ -137,9 +134,7 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                                                                 .addComponent(btnRetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                                 .addComponent(btnEssentials, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                                 .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                                .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                                        .addComponent(jButton2))))
                                 .addContainerGap(11, Short.MAX_VALUE))
                 );
                 jPanel2Layout.setVerticalGroup(
@@ -159,9 +154,7 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                                 .addComponent(jButton1)
                                 .addGap(26, 26, 26)
                                 .addComponent(jButton2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                                .addComponent(jButton3)
-                                .addGap(21, 21, 21))
+                                .addContainerGap(83, Short.MAX_VALUE))
                 );
 
                 jSplitPane1.setLeftComponent(jPanel2);
@@ -193,7 +186,6 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
         private javax.swing.JLabel enterpriseLabel;
         private javax.swing.JButton jButton1;
         private javax.swing.JButton jButton2;
-        private javax.swing.JButton jButton3;
         private javax.swing.JPanel jPanel1;
         private javax.swing.JPanel jPanel2;
         private javax.swing.JSplitPane jSplitPane1;
