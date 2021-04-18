@@ -245,7 +245,7 @@ public class MainJFrame extends javax.swing.JFrame {
         dB4OUtil.storeSystem(system);
         jPanel3.setVisible(true);
         container.setVisible(false);
-        jPanel1.setVisible(false);
+        jPanel1.setVisible(true);
         }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
