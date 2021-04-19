@@ -217,7 +217,7 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
 
         private void btnEateriespanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEateriespanelActionPerformed
             // TODO add your handling code here:
-            EateriesJPanel eateriesJPanel = new EateriesJPanel(userProcessContainer, ecosystem);
+            EateriesJPanel eateriesJPanel = new EateriesJPanel(userProcessContainer, ecosystem, customer);
             userProcessContainer.add("eateriesJPanel", eateriesJPanel);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
@@ -227,7 +227,7 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
 
         private void btnHouseholdServicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHouseholdServicesActionPerformed
             // TODO add your handling code here:
-            ServicesJPanel servicesJPanel = new ServicesJPanel(userProcessContainer, ecosystem);
+            ServicesJPanel servicesJPanel = new ServicesJPanel(userProcessContainer, ecosystem, customer);
             userProcessContainer.add("eateriesJPanel", servicesJPanel);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
@@ -235,7 +235,7 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
 
         private void btnEssentialsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEssentialsActionPerformed
             // TODO add your handling code here:
-            EssentialsJPanel essentialsJPanel = new EssentialsJPanel(userProcessContainer, ecosystem);
+            EssentialsJPanel essentialsJPanel = new EssentialsJPanel(userProcessContainer, ecosystem, customer);
             userProcessContainer.add("eateriesJPanel", essentialsJPanel);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
@@ -244,7 +244,7 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
 
         private void btnRetailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetailActionPerformed
             // TODO add your handling code here:
-            RetailJPanel RetailJPanel = new RetailJPanel(userProcessContainer, ecosystem);
+            RetailJPanel RetailJPanel = new RetailJPanel(userProcessContainer, ecosystem, customer);
             userProcessContainer.add("eateriesJPanel", RetailJPanel);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
