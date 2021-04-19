@@ -5,12 +5,15 @@
         <group>
             <file>file:/D:/Documents/Java/EcoSystemDemo/src/ui/CustomerRole/CustomerWorkAreaJPanel.java</file>
             <file>file:/D:/Documents/Java/EcoSystemDemo/src/ui/SystemAdminWorkArea/SystemAdminWorkAreaJPanel.java</file>
+            <file>file:/D:/Documents/Java/EcoSystemDemo/src/ui/AdministrativeRole/AdminWorkAreaJPanel.java</file>
             <file>file:/D:/Documents/Java/EcoSystemDemo/src/Business/EcoSystem.java</file>
             <file>file:/D:/Documents/Java/EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageNetworkJPanel.java</file>
             <file>file:/D:/Documents/Java/EcoSystemDemo/src/Business/Network/Network.java</file>
             <file>file:/D:/Documents/Java/EcoSystemDemo/src/ui/AdministrativeRole/ManageOrganizationJPanel.java</file>
+            <file>file:/D:/Documents/Java/EcoSystemDemo/src/ui/CustomerRole/YourOrdersJPanel.java</file>
             <file>file:/D:/Documents/Java/EcoSystemDemo/src/ui/CustomerRole/EateriesJPanel.java</file>
             <file>file:/D:/Documents/Java/EcoSystemDemo/src/Business/Organization/OrganizationDirectory.java</file>
+            <file>file:/D:/Documents/Java/EcoSystemDemo/src/ui/AdministrativeRole/ManageEmployeeJPanel.java</file>
         </group>
     </open-files>
 </project-private>
