@@ -60,4 +60,17 @@ public class EcoSystem extends Organization{
         }
         return true;
     }
+    
+    public void removeNetwork(Network n){
+        networkList.remove(n);
+    }
+    
+    public Network getNetwork(String name){
+        for (Network n: networkList){
+            if(n.getName().equalsIgnoreCase(name)){
+                return n;
+            }
+        }
+        return null;
+    }
 }

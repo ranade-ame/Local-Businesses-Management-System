@@ -52,7 +52,19 @@ public class EnterpriseDirectory {
             enterpriseList.add(enterprise);
         }
         
-        
         return enterprise;
+    }
+    
+    public void removeEnterprise(Enterprise e){
+        enterpriseList.remove(e);
+    }
+    
+    public Enterprise getEnterprise(String name){
+        for(Enterprise e : enterpriseList){
+            if(e.getName().equalsIgnoreCase(name)){
+                return e;
+            }
+        }
+        return null;
     }
 }
