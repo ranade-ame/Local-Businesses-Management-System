@@ -18,6 +18,16 @@ import java.util.ArrayList;
 public abstract class Organization {
 
     private String name;
+<<<<<<< Updated upstream
+=======
+    private String phone;
+    private String type;
+    private String streetaddress;
+    private String country;
+    private String city;
+    private int zipcode;
+    private String email;
+>>>>>>> Stashed changes
     private WorkQueue workQueue;
     private EmployeeDirectory employeeDirectory;
     private CustomerDirectory customerdirectory;
@@ -36,8 +46,19 @@ public abstract class Organization {
         }
     }
 
+<<<<<<< Updated upstream
     public Organization(String name) {
         this.name = name;
+=======
+    public Organization(String type, String name, String streetaddress, String city, String country, int zipcode, String email, String phone) {
+        this.name = name;
+        this.streetaddress = streetaddress;
+        this.email = email;
+        this.country = country;
+        this.city = city;
+        this.zipcode = zipcode;
+        this.phone = phone;
+>>>>>>> Stashed changes
         workQueue = new WorkQueue();
         employeeDirectory = new EmployeeDirectory();
         userAccountDirectory = new UserAccountDirectory();
@@ -47,6 +68,66 @@ public abstract class Organization {
     }
 
     public abstract ArrayList<Role> getSupportedRole();
+<<<<<<< Updated upstream
+=======
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+    
+    public String getStreetaddress() {
+        return streetaddress;
+    }
+
+    public void setStreetaddress(String streetaddress) {
+        this.streetaddress = streetaddress;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public int getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(int zipcode) {
+        this.zipcode = zipcode;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+>>>>>>> Stashed changes
     
     public UserAccountDirectory getUserAccountDirectory() {
         return userAccountDirectory;

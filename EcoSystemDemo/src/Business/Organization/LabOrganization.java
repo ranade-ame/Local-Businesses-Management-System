@@ -14,8 +14,13 @@ import java.util.ArrayList;
  */
 public class LabOrganization extends Organization{
 
+<<<<<<< Updated upstream
     public LabOrganization() {
         super(Organization.Type.Lab.getValue());
+=======
+    public LabOrganization(String name, String streetaddress, String city, String country, int zipcode, String email, String phone) {
+        super(Organization.Type.Lab.getValue(), name, streetaddress, city, country, zipcode, email, phone);
+>>>>>>> Stashed changes
     }
 
     @Override

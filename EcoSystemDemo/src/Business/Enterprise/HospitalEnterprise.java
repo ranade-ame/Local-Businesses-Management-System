@@ -14,8 +14,13 @@ import java.util.ArrayList;
  */
 public class HospitalEnterprise extends Enterprise {
     
+<<<<<<< Updated upstream
     public HospitalEnterprise(String name){
         super(name,EnterpriseType.Hospital);
+=======
+    public HospitalEnterprise(String name, String streetaddress, String city, String country, int zipcode, String email, String phone){
+        super(name,EnterpriseType.Hospital, streetaddress, city, country, zipcode, email, phone);
+>>>>>>> Stashed changes
     }
     @Override
     public ArrayList<Role> getSupportedRole() {

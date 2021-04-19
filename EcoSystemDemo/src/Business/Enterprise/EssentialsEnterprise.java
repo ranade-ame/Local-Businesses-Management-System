@@ -13,8 +13,13 @@ import java.util.ArrayList;
  * @author abhishek <your.name at your.org>
  */
 public class EssentialsEnterprise extends Enterprise{
+<<<<<<< Updated upstream
     public EssentialsEnterprise(String name){
         super(name,EnterpriseType.Essentials);
+=======
+    public EssentialsEnterprise(String name, String streetaddress, String city, String country, int zipcode, String email, String phone){
+        super(name,EnterpriseType.Essentials, streetaddress, city, country, zipcode, email, phone);
+>>>>>>> Stashed changes
         
     }
         

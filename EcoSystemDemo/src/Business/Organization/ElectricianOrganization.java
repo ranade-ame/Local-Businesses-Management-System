@@ -15,8 +15,13 @@ import java.util.ArrayList;
  */
 public class ElectricianOrganization extends Organization{
 
+<<<<<<< Updated upstream
     public ElectricianOrganization() {
         super(Organization.Type.Electrician.getValue());
+=======
+    public ElectricianOrganization(String name, String streetaddress, String city, String country, int zipcode, String email, String phone) {
+        super(Organization.Type.Electrician.getValue(), name, streetaddress, city, country, zipcode, email, phone);
+>>>>>>> Stashed changes
     }
 
     @Override

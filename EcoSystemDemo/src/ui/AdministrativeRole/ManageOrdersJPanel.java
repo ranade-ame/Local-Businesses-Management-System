@@ -144,9 +144,9 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         }//GEN-LAST:event_btnRefreshActionPerformed
 
         private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);                // TODO add your handling code here:userProcessContainer.remove(this);
+            userProcessContainer.remove(this);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.previous(userProcessContainer);                // TODO add your handling code here:userProcessContainer.remove(this);
                 
         }//GEN-LAST:event_btnBackActionPerformed
 

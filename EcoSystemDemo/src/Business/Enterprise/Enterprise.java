@@ -45,8 +45,13 @@ public abstract class Enterprise extends Organization{
         this.enterpriseType = enterpriseType;
     }
     
+<<<<<<< Updated upstream
     public Enterprise(String name,EnterpriseType type){
         super(name);
+=======
+    public Enterprise(String name,EnterpriseType type, String streetaddress, String city, String country, int zipcode, String email, String phone){
+        super(type.toString(), name, streetaddress, city, country, zipcode, email, phone);
+>>>>>>> Stashed changes
         this.enterpriseType=type;
         organizationDirectory=new OrganizationDirectory();
     }

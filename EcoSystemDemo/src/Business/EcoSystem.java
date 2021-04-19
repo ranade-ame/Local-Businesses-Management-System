@@ -9,6 +9,10 @@ import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.Role.Role;
 import Business.Role.SystemAdminRole;
+<<<<<<< Updated upstream
+=======
+import static java.lang.Integer.parseInt;
+>>>>>>> Stashed changes
 import java.util.ArrayList;
 
 /**
@@ -38,7 +42,11 @@ public class EcoSystem extends Organization{
         return roleList;
     }
     private EcoSystem(){
+<<<<<<< Updated upstream
         super(null);
+=======
+        super(null, null, null, null, null, parseInt(null), null, null);
+>>>>>>> Stashed changes
         networkList=new ArrayList<Network>();
     }
 
