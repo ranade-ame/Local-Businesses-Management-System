@@ -14,13 +14,8 @@ import java.util.ArrayList;
  * @author abhishek <your.name at your.org>
  */
 public class TransportOrganization extends Organization{
-<<<<<<< Updated upstream
-    public TransportOrganization(){
-        super(Organization.Type.Transport.getValue());
-=======
     public TransportOrganization(String name, String streetaddress, String city, String country, int zipcode, String email, String phone){
         super(Organization.Type.Transport.getValue(), name, streetaddress, city, country, zipcode, email, phone);
->>>>>>> Stashed changes
     }
 
     @Override

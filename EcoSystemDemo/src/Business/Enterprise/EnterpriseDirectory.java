@@ -29,28 +29,6 @@ public class EnterpriseDirectory {
     }
     
     //Create enterprise
-<<<<<<< Updated upstream
-    public Enterprise createAndAddEnterprise(String name,Enterprise.EnterpriseType type){
-        Enterprise enterprise=null;
-        if(type==Enterprise.EnterpriseType.Hospital){
-            enterprise=new HospitalEnterprise(name);
-            enterpriseList.add(enterprise);
-        }
-        else if(type==Enterprise.EnterpriseType.Eateries){
-            enterprise = new EateriesEnterprise(name);
-            enterpriseList.add(enterprise);
-        }
-        else if(type==Enterprise.EnterpriseType.Service){
-            enterprise = new ServiceEnterprise(name);
-            enterpriseList.add(enterprise);
-        }
-        else if(type==Enterprise.EnterpriseType.Essentials){
-            enterprise = new EssentialsEnterprise(name);
-            enterpriseList.add(enterprise);
-        }
-        else if(type==Enterprise.EnterpriseType.Retail){
-            enterprise = new RetailEnterprise(name);
-=======
     public Enterprise createAndAddEnterprise(String name, String streetaddress, String city, String country, int zipcode, String email, Enterprise.EnterpriseType type, String phone){
         Enterprise enterprise=null;
         if(type==Enterprise.EnterpriseType.Hospital){
@@ -71,7 +49,6 @@ public class EnterpriseDirectory {
         }
         else if(type==Enterprise.EnterpriseType.Retail){
             enterprise = new RetailEnterprise(name, streetaddress, city, country, zipcode, email, phone);
->>>>>>> Stashed changes
             enterpriseList.add(enterprise);
         }
         

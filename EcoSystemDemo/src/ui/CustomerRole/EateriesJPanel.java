@@ -6,6 +6,8 @@
 package ui.CustomerRole;
 
 import Business.EcoSystem;
+import Business.Network.Network;
+import Business.Organization.OrganizationDirectory;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JPanel;
@@ -21,9 +23,12 @@ public class EateriesJPanel extends javax.swing.JPanel {
 	 */
 	private JPanel userProcessContainer;
         private EcoSystem ecosystem;
+        
 	public EateriesJPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
-		this.userProcessContainer = userProcessContainer;
+            this.userProcessContainer = userProcessContainer;
             this.ecosystem = ecosystem;
+
+            
             initComponents();
 	}
 
