@@ -14,13 +14,8 @@ import java.util.ArrayList;
  */
 public class AdminOrganization extends Organization{
 
-<<<<<<< Updated upstream
-    public AdminOrganization() {
-        super(Type.Admin.getValue());
-=======
     public AdminOrganization(String name, String streetaddress, String city, String country, int zipcode, String email, String phone) {
         super(Type.Admin.getValue(), name, streetaddress, city, country, zipcode, email, phone);
->>>>>>> Stashed changes
     }
     
     @Override

@@ -5,13 +5,16 @@
  */
 package ui.CustomerRole;
 
+import Business.Customer.Customer;
 import Business.Customer.CustomerDirectory;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
+import Business.Network.Network;
 import Business.Organization.Organization;
 
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
+import java.util.ArrayList;
 import javax.swing.JPanel;
 
 /**
@@ -26,6 +29,8 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
     private Enterprise enterprise;
     private UserAccount account;
     private CustomerDirectory customerDirectory;
+    private Customer customer;
+    
     /**
      * @param userProcessContainer
      * @param account
@@ -44,6 +49,13 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
         this.account = account;
         this.organization = Organization;
         this.enterprise = enterprise;
+        for (Customer c : customerDirectory.getCustomerDir()){
+            if(c.getUsername().equalsIgnoreCase(account.getUsername())){
+                this.customer = c;
+            }
+        }
+        ArrayList<Network> networklist = ecosystem.getNetworkList();
+        
         valueLabel.setText(account.getUsername());
     }
 
@@ -204,47 +216,46 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
         }// </editor-fold>//GEN-END:initComponents
 
         private void btnEateriespanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEateriespanelActionPerformed
-                // TODO add your handling code here:
-		EateriesJPanel eateriesJPanel = new EateriesJPanel(userProcessContainer, ecosystem);
-        userProcessContainer.add("eateriesJPanel", eateriesJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+            // TODO add your handling code here:
+            EateriesJPanel eateriesJPanel = new EateriesJPanel(userProcessContainer, ecosystem);
+            userProcessContainer.add("eateriesJPanel", eateriesJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
 		
 		
         }//GEN-LAST:event_btnEateriespanelActionPerformed
 
         private void btnHouseholdServicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHouseholdServicesActionPerformed
-                // TODO add your handling code here:
-		ServicesJPanel servicesJPanel = new ServicesJPanel(userProcessContainer, ecosystem);
-        userProcessContainer.add("eateriesJPanel", servicesJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+            // TODO add your handling code here:
+            ServicesJPanel servicesJPanel = new ServicesJPanel(userProcessContainer, ecosystem);
+            userProcessContainer.add("eateriesJPanel", servicesJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
         }//GEN-LAST:event_btnHouseholdServicesActionPerformed
 
         private void btnEssentialsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEssentialsActionPerformed
-                // TODO add your handling code here:
-		EssentialsJPanel essentialsJPanel = new EssentialsJPanel(userProcessContainer, ecosystem);
-        userProcessContainer.add("eateriesJPanel", essentialsJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+            // TODO add your handling code here:
+            EssentialsJPanel essentialsJPanel = new EssentialsJPanel(userProcessContainer, ecosystem);
+            userProcessContainer.add("eateriesJPanel", essentialsJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
 		
         }//GEN-LAST:event_btnEssentialsActionPerformed
 
         private void btnRetailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetailActionPerformed
-                // TODO add your handling code here:
-		RetailJPanel RetailJPanel = new RetailJPanel(userProcessContainer, ecosystem);
-        userProcessContainer.add("eateriesJPanel", RetailJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+            // TODO add your handling code here:
+            RetailJPanel RetailJPanel = new RetailJPanel(userProcessContainer, ecosystem);
+            userProcessContainer.add("eateriesJPanel", RetailJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
         }//GEN-LAST:event_btnRetailActionPerformed
 
         private void btnyourordersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnyourordersActionPerformed
-                // TODO add your handling code here:
-		YourOrdersJPanel yourordersJPanel = new YourOrdersJPanel(userProcessContainer, ecosystem);
-        userProcessContainer.add("eateriesJPanel", yourordersJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-		
+            // TODO add your handling code here:
+            YourOrdersJPanel yourordersJPanel = new YourOrdersJPanel(userProcessContainer, ecosystem);
+            userProcessContainer.add("eateriesJPanel", yourordersJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);	
         }//GEN-LAST:event_btnyourordersActionPerformed
 
 

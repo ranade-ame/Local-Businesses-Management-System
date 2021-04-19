@@ -14,13 +14,8 @@ import java.util.ArrayList;
  * @author abhishek <your.name at your.org>
  */
 public class FactoriesOrganization extends Organization {
-<<<<<<< Updated upstream
-    public FactoriesOrganization(){
-        super(Organization.Type.Factories.getValue());
-=======
     public FactoriesOrganization(String name, String streetaddress, String city, String country, int zipcode, String email, String phone){
         super(Organization.Type.Factories.getValue(), name, streetaddress, city, country, zipcode, email, phone);
->>>>>>> Stashed changes
     }
 
     @Override

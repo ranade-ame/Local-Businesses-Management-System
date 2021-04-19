@@ -13,13 +13,8 @@ import java.util.ArrayList;
  * @author abhishek <your.name at your.org>
  */
 public class EateriesEnterprise extends Enterprise {
-<<<<<<< Updated upstream
-    public EateriesEnterprise(String name){
-        super(name,EnterpriseType.Eateries);
-=======
     public EateriesEnterprise(String name, String streetaddress, String city, String country, int zipcode, String email, String phone){
         super(name,EnterpriseType.Eateries, streetaddress, city, country, zipcode, email, phone);
->>>>>>> Stashed changes
     }
 
     @Override
