@@ -21,7 +21,7 @@
               <Component id="enterpriseLabel" min="-2" pref="127" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="valueLabel" min="-2" pref="158" max="-2" attributes="0"/>
-              <EmptySpace pref="365" max="32767" attributes="0"/>
+              <EmptySpace pref="313" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -33,7 +33,7 @@
                   <Component id="valueLabel" alignment="0" min="-2" pref="26" max="-2" attributes="0"/>
                   <Component id="enterpriseLabel" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="383" max="32767" attributes="0"/>
+              <EmptySpace pref="380" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

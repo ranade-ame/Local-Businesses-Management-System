@@ -78,12 +78,27 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 130, -1));
 
                 btnManageOrders.setText("Manage Orders");
+                btnManageOrders.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btnManageOrdersActionPerformed(evt);
+                        }
+                });
                 add(btnManageOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 160, -1));
 
-                jButton1.setText("Manage Supplies of Store");
+                jButton1.setText("Manage Supplies");
+                jButton1.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                jButton1ActionPerformed(evt);
+                        }
+                });
                 add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 160, -1));
 
                 jButton2.setText("Manage Vendors");
+                jButton2.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                jButton2ActionPerformed(evt);
+                        }
+                });
                 add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 160, -1));
         }// </editor-fold>//GEN-END:initComponents
 
@@ -113,6 +128,30 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_manageOrganizationJButtonActionPerformed
+
+        private void btnManageOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrdersActionPerformed
+                // TODO add your handling code here:
+		ManageOrdersJPanel manageOrdersJPanel = new ManageOrdersJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
+        userProcessContainer.add("manageOrdersJPanel", manageOrdersJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+        }//GEN-LAST:event_btnManageOrdersActionPerformed
+
+        private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+                // TODO add your handling code here:
+			ManageSuppliesJPanel managesuppliesJPanel = new ManageSuppliesJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
+        userProcessContainer.add("manageOrdersJPanel", managesuppliesJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+        }//GEN-LAST:event_jButton1ActionPerformed
+
+        private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+                // TODO add your handling code here:
+			ManageVendorsJPanel managevendorsJPanel = new ManageVendorsJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
+        userProcessContainer.add("manageOrdersJPanel", managevendorsJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+        }//GEN-LAST:event_jButton2ActionPerformed
     
     
         // Variables declaration - do not modify//GEN-BEGIN:variables

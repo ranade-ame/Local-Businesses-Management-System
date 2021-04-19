@@ -14,8 +14,8 @@ import java.util.ArrayList;
  * @author abhishek <your.name at your.org>
  */
 public class SuppliersOrganization extends Organization{
-    public SuppliersOrganization(){
-        super(Organization.Type.Suppliers.getValue());
+    public SuppliersOrganization(String name, String streetaddress, String city, String country, int zipcode, String email, String phone){
+        super(Organization.Type.Suppliers.getValue(), name, streetaddress, city, country, zipcode, email, phone);
     }
     @Override
     public ArrayList<Role> getSupportedRole() {

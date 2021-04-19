@@ -5,6 +5,13 @@
  */
 package ui.CustomerRole;
 
+import Business.EcoSystem;
+import Business.Network.Network;
+import Business.Organization.OrganizationDirectory;
+import java.awt.CardLayout;
+import java.awt.Component;
+import javax.swing.JPanel;
+
 /**
  *
  * @author bidar
@@ -14,8 +21,15 @@ public class EateriesJPanel extends javax.swing.JPanel {
 	/**
 	 * Creates new form EateriesJPanel
 	 */
-	public EateriesJPanel() {
-		initComponents();
+	private JPanel userProcessContainer;
+        private EcoSystem ecosystem;
+        
+	public EateriesJPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
+            this.userProcessContainer = userProcessContainer;
+            this.ecosystem = ecosystem;
+
+            
+            initComponents();
 	}
 
 	/**
@@ -32,6 +46,7 @@ public class EateriesJPanel extends javax.swing.JPanel {
                 jScrollPane1 = new javax.swing.JScrollPane();
                 tblcafeslist = new javax.swing.JTable();
                 btnMenuDetails = new javax.swing.JButton();
+                btnback = new javax.swing.JButton();
 
                 enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
                 enterpriseLabel.setText("Hi");
@@ -40,26 +55,26 @@ public class EateriesJPanel extends javax.swing.JPanel {
 
                 tblcafeslist.setModel(new javax.swing.table.DefaultTableModel(
                         new Object [][] {
-
+                                {null, null, null, null, null, null},
+                                {null, null, null, null, null, null}
                         },
                         new String [] {
-                                "Cafe Name", "Contact Number", "Address", "ZipCode"
+                                "Restaurant Name", "Contact Number", "Address", "Street Address", "City", "ZipCode"
                         }
-                ) {
-                        boolean[] canEdit = new boolean [] {
-                                false, false, false, false
-                        };
-
-                        public boolean isCellEditable(int rowIndex, int columnIndex) {
-                                return canEdit [columnIndex];
-                        }
-                });
+                ));
                 jScrollPane1.setViewportView(tblcafeslist);
                 if (tblcafeslist.getColumnModel().getColumnCount() > 0) {
-                        tblcafeslist.getColumnModel().getColumn(3).setResizable(false);
+                        tblcafeslist.getColumnModel().getColumn(5).setResizable(false);
                 }
 
                 btnMenuDetails.setText("View Menu Details");
+
+                btnback.setText("<< Back");
+                btnback.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btnbackActionPerformed(evt);
+                        }
+                });
 
                 javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
                 this.setLayout(layout);
@@ -71,16 +86,16 @@ public class EateriesJPanel extends javax.swing.JPanel {
                                                 .addGap(76, 76, 76)
                                                 .addComponent(enterpriseLabel)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(valueLabel)
-                                                .addGap(0, 0, Short.MAX_VALUE))
+                                                .addComponent(valueLabel))
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGap(26, 26, 26)
-                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 559, Short.MAX_VALUE)))
-                                .addContainerGap())
+                                                .addComponent(btnback)
+                                                .addGap(127, 127, 127)
+                                                .addComponent(btnMenuDetails)))
+                                .addContainerGap(242, Short.MAX_VALUE))
                         .addGroup(layout.createSequentialGroup()
-                                .addGap(226, 226, 226)
-                                .addComponent(btnMenuDetails)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap()
+                                .addComponent(jScrollPane1))
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,14 +107,29 @@ public class EateriesJPanel extends javax.swing.JPanel {
                                 .addGap(18, 18, 18)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
                                 .addGap(28, 28, 28)
-                                .addComponent(btnMenuDetails)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btnMenuDetails)
+                                        .addComponent(btnback))
                                 .addGap(120, 120, 120))
                 );
         }// </editor-fold>//GEN-END:initComponents
 
+        private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+                // TODO add your handling code here:
+		userProcessContainer.remove(this);
+         Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        CustomerWorkAreaJPanel custAreajp = (CustomerWorkAreaJPanel) component;
+        
+
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+        }//GEN-LAST:event_btnbackActionPerformed
+
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
         private javax.swing.JButton btnMenuDetails;
+        private javax.swing.JButton btnback;
         private javax.swing.JLabel enterpriseLabel;
         private javax.swing.JScrollPane jScrollPane1;
         private javax.swing.JTable tblcafeslist;

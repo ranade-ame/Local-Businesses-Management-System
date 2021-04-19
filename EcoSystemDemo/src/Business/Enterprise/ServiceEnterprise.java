@@ -14,8 +14,8 @@ import java.util.ArrayList;
  */
 public class ServiceEnterprise extends Enterprise{
 
-    public ServiceEnterprise(String name) {
-        super(name,EnterpriseType.Service);
+    public ServiceEnterprise(String name, String streetaddress, String city, String country, int zipcode, String email, String phone) {
+        super(name,EnterpriseType.Service, streetaddress, city, country, zipcode, email, phone);
     }
 
     @Override

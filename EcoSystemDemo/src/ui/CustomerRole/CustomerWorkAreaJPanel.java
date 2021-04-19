@@ -5,12 +5,16 @@
  */
 package ui.CustomerRole;
 
+import Business.Customer.Customer;
 import Business.Customer.CustomerDirectory;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
+import Business.Network.Network;
 import Business.Organization.Organization;
 
 import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import java.util.ArrayList;
 import javax.swing.JPanel;
 
 /**
@@ -25,6 +29,8 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
     private Enterprise enterprise;
     private UserAccount account;
     private CustomerDirectory customerDirectory;
+    private Customer customer;
+    
     /**
      * @param userProcessContainer
      * @param account
@@ -43,6 +49,13 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
         this.account = account;
         this.organization = Organization;
         this.enterprise = enterprise;
+        for (Customer c : customerDirectory.getCustomerDir()){
+            if(c.getUsername().equalsIgnoreCase(account.getUsername())){
+                this.customer = c;
+            }
+        }
+        ArrayList<Network> networklist = ecosystem.getNetworkList();
+        
         valueLabel.setText(account.getUsername());
     }
 
@@ -69,9 +82,8 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                 btnRetail = new javax.swing.JButton();
                 btnEssentials = new javax.swing.JButton();
                 lblorder = new javax.swing.JLabel();
-                jButton1 = new javax.swing.JButton();
-                jButton2 = new javax.swing.JButton();
-                jButton3 = new javax.swing.JButton();
+                btnyourorders = new javax.swing.JButton();
+                btntrackorders = new javax.swing.JButton();
 
                 jSplitPane1.setDividerLocation(200);
 
@@ -104,20 +116,43 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                 jSplitPane1.setRightComponent(jPanel1);
 
                 btnEateriespanel.setText("Eateries");
+                btnEateriespanel.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btnEateriespanelActionPerformed(evt);
+                        }
+                });
 
                 btnHouseholdServices.setText("Household Services");
+                btnHouseholdServices.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btnHouseholdServicesActionPerformed(evt);
+                        }
+                });
 
                 btnRetail.setText("Retail");
+                btnRetail.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btnRetailActionPerformed(evt);
+                        }
+                });
 
                 btnEssentials.setText("Essentials");
+                btnEssentials.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btnEssentialsActionPerformed(evt);
+                        }
+                });
 
                 lblorder.setText("What would you like to buy today?");
 
-                jButton1.setText("Your Orders");
+                btnyourorders.setText("Your Orders");
+                btnyourorders.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btnyourordersActionPerformed(evt);
+                        }
+                });
 
-                jButton2.setText("Track Your Orders");
-
-                jButton3.setText("Logout");
+                btntrackorders.setText("Track Your Orders");
 
                 javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
                 jPanel2.setLayout(jPanel2Layout);
@@ -136,10 +171,8 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                                                                 .addComponent(btnEateriespanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                                 .addComponent(btnRetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                                 .addComponent(btnEssentials, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                                .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                                                .addComponent(btnyourorders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                        .addComponent(btntrackorders))))
                                 .addContainerGap(11, Short.MAX_VALUE))
                 );
                 jPanel2Layout.setVerticalGroup(
@@ -156,12 +189,10 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                                 .addGap(33, 33, 33)
                                 .addComponent(btnEssentials)
                                 .addGap(30, 30, 30)
-                                .addComponent(jButton1)
+                                .addComponent(btnyourorders)
                                 .addGap(26, 26, 26)
-                                .addComponent(jButton2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                                .addComponent(jButton3)
-                                .addGap(21, 21, 21))
+                                .addComponent(btntrackorders)
+                                .addContainerGap(83, Short.MAX_VALUE))
                 );
 
                 jSplitPane1.setLeftComponent(jPanel2);
@@ -184,16 +215,58 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                 );
         }// </editor-fold>//GEN-END:initComponents
 
+        private void btnEateriespanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEateriespanelActionPerformed
+            // TODO add your handling code here:
+            EateriesJPanel eateriesJPanel = new EateriesJPanel(userProcessContainer, ecosystem);
+            userProcessContainer.add("eateriesJPanel", eateriesJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+		
+		
+        }//GEN-LAST:event_btnEateriespanelActionPerformed
+
+        private void btnHouseholdServicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHouseholdServicesActionPerformed
+            // TODO add your handling code here:
+            ServicesJPanel servicesJPanel = new ServicesJPanel(userProcessContainer, ecosystem);
+            userProcessContainer.add("eateriesJPanel", servicesJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+        }//GEN-LAST:event_btnHouseholdServicesActionPerformed
+
+        private void btnEssentialsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEssentialsActionPerformed
+            // TODO add your handling code here:
+            EssentialsJPanel essentialsJPanel = new EssentialsJPanel(userProcessContainer, ecosystem);
+            userProcessContainer.add("eateriesJPanel", essentialsJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+		
+        }//GEN-LAST:event_btnEssentialsActionPerformed
+
+        private void btnRetailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetailActionPerformed
+            // TODO add your handling code here:
+            RetailJPanel RetailJPanel = new RetailJPanel(userProcessContainer, ecosystem);
+            userProcessContainer.add("eateriesJPanel", RetailJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+        }//GEN-LAST:event_btnRetailActionPerformed
+
+        private void btnyourordersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnyourordersActionPerformed
+            // TODO add your handling code here:
+            YourOrdersJPanel yourordersJPanel = new YourOrdersJPanel(userProcessContainer, ecosystem);
+            userProcessContainer.add("eateriesJPanel", yourordersJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);	
+        }//GEN-LAST:event_btnyourordersActionPerformed
+
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
         private javax.swing.JButton btnEateriespanel;
         private javax.swing.JButton btnEssentials;
         private javax.swing.JButton btnHouseholdServices;
         private javax.swing.JButton btnRetail;
+        private javax.swing.JButton btntrackorders;
+        private javax.swing.JButton btnyourorders;
         private javax.swing.JLabel enterpriseLabel;
-        private javax.swing.JButton jButton1;
-        private javax.swing.JButton jButton2;
-        private javax.swing.JButton jButton3;
         private javax.swing.JPanel jPanel1;
         private javax.swing.JPanel jPanel2;
         private javax.swing.JSplitPane jSplitPane1;

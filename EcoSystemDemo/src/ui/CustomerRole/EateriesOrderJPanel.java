@@ -5,6 +5,12 @@
  */
 package ui.CustomerRole;
 
+import Business.EcoSystem;
+import java.awt.CardLayout;
+import java.awt.Component;
+import javax.swing.JPanel;
+import ui.SystemAdminWorkArea.SystemAdminWorkAreaJPanel;
+
 /**
  *
  * @author bidar
@@ -14,6 +20,8 @@ public class EateriesOrderJPanel extends javax.swing.JPanel {
 	/**
 	 * Creates new form EateriesOrderJPanel
 	 */
+	private JPanel userProcessContainer;
+    private EcoSystem system;
 	public EateriesOrderJPanel() {
 		initComponents();
 	}
@@ -39,6 +47,8 @@ public class EateriesOrderJPanel extends javax.swing.JPanel {
                 tblMenu1 = new javax.swing.JTable();
                 requestTestJButton = new javax.swing.JButton();
                 backJButton = new javax.swing.JButton();
+                jLabel1 = new javax.swing.JLabel();
+                jTextField1 = new javax.swing.JTextField();
 
                 tblMenu.setModel(new javax.swing.table.DefaultTableModel(
                         new Object [][] {
@@ -115,31 +125,41 @@ public class EateriesOrderJPanel extends javax.swing.JPanel {
                         }
                 });
 
+                jLabel1.setText("Total Amount");
+
                 javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
                 this.setLayout(layout);
                 layout.setHorizontalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(56, 56, 56)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addGroup(layout.createSequentialGroup()
+                                                .addComponent(enterpriseLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(btnAddtoCart, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(25, 25, 25)
                                                 .addComponent(btnRemovefromCart, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(backJButton)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(requestTestJButton))
-                                                .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(enterpriseLabel1)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(valueLabel))
-                                                .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(enterpriseLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addContainerGap(70, Short.MAX_VALUE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jLabel1)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                                .addGroup(layout.createSequentialGroup()
+                                                                        .addComponent(backJButton)
+                                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                        .addComponent(requestTestJButton))
+                                                                .addGroup(layout.createSequentialGroup()
+                                                                        .addComponent(enterpriseLabel1)
+                                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                        .addComponent(valueLabel))
+                                                                .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(82, 82, 82)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,19 +172,29 @@ public class EateriesOrderJPanel extends javax.swing.JPanel {
                                 .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(btnAddtoCart)
-                                        .addComponent(btnRemovefromCart))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(btnAddtoCart)
+                                                        .addComponent(btnRemovefromCart)))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(38, 38, 38)
+                                                .addComponent(enterpriseLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(enterpriseLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
                                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(requestTestJButton)
-                                        .addComponent(backJButton))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(jLabel1)
+                                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(requestTestJButton))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(39, 39, 39)
+                                                .addComponent(backJButton)))
+                                .addContainerGap(18, Short.MAX_VALUE))
                 );
         }// </editor-fold>//GEN-END:initComponents
 
@@ -184,7 +214,14 @@ public class EateriesOrderJPanel extends javax.swing.JPanel {
         }//GEN-LAST:event_requestTestJButtonActionPerformed
 
         private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+	userProcessContainer.remove(this);
+         Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        CustomerWorkAreaJPanel custAreajp = (CustomerWorkAreaJPanel) component;
+        
 
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
                 
         }//GEN-LAST:event_backJButtonActionPerformed
 
@@ -196,8 +233,10 @@ public class EateriesOrderJPanel extends javax.swing.JPanel {
         private javax.swing.JLabel enterpriseLabel;
         private javax.swing.JLabel enterpriseLabel1;
         private javax.swing.JLabel enterpriseLabel2;
+        private javax.swing.JLabel jLabel1;
         private javax.swing.JScrollPane jScrollPane3;
         private javax.swing.JScrollPane jScrollPane4;
+        private javax.swing.JTextField jTextField1;
         private javax.swing.JButton requestTestJButton;
         private javax.swing.JTable tblMenu;
         private javax.swing.JTable tblMenu1;

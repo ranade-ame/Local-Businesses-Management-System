@@ -5,6 +5,10 @@
  */
 package ui.AdministrativeRole;
 
+import Business.Organization.OrganizationDirectory;
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+
 /**
  *
  * @author bidar
@@ -14,7 +18,11 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
 	/**
 	 * Creates new form ManageOrdersJPanel
 	 */
-	public ManageOrdersJPanel() {
+	private OrganizationDirectory organizationDir;
+    private JPanel userProcessContainer;
+	public ManageOrdersJPanel(JPanel userProcessContainer,OrganizationDirectory organizationDir) {
+		this.userProcessContainer = userProcessContainer;
+        this.organizationDir = organizationDir;
 		initComponents();
 	}
 
@@ -52,7 +60,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
                 });
                 jScrollPane1.setViewportView(tblOrderDetail);
 
-                btnViewOrder.setBackground(new java.awt.Color(0, 0, 0));
+                btnViewOrder.setBackground(new java.awt.Color(255, 255, 255));
                 btnViewOrder.setText("View Order");
                 btnViewOrder.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,7 +68,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
                         }
                 });
 
-                btnAssignDeliveryMan.setBackground(new java.awt.Color(0, 0, 0));
+                btnAssignDeliveryMan.setBackground(new java.awt.Color(255, 255, 255));
                 btnAssignDeliveryMan.setText("Assign Delivery Man to Order");
                 btnAssignDeliveryMan.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,7 +76,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
                         }
                 });
 
-                btnRefresh.setBackground(new java.awt.Color(0, 0, 0));
+                btnRefresh.setBackground(new java.awt.Color(255, 255, 255));
                 btnRefresh.setText("Refresh");
                 btnRefresh.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,7 +84,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
                         }
                 });
 
-                btnBack.setBackground(new java.awt.Color(0, 0, 0));
+                btnBack.setBackground(new java.awt.Color(255, 255, 255));
                 btnBack.setText("<<Back");
                 btnBack.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +144,9 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         }//GEN-LAST:event_btnRefreshActionPerformed
 
         private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-                // TODO add your handling code here:userProcessContainer.remove(this);
+            userProcessContainer.remove(this);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.previous(userProcessContainer);                // TODO add your handling code here:userProcessContainer.remove(this);
                 
         }//GEN-LAST:event_btnBackActionPerformed
 

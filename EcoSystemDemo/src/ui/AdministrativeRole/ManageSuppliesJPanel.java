@@ -5,6 +5,10 @@
  */
 package ui.AdministrativeRole;
 
+import Business.Organization.OrganizationDirectory;
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+
 /**
  *
  * @author bidar
@@ -14,7 +18,11 @@ public class ManageSuppliesJPanel extends javax.swing.JPanel {
 	/**
 	 * Creates new form ManageSuppliesJPanel
 	 */
-	public ManageSuppliesJPanel() {
+	private OrganizationDirectory organizationDir;
+    private JPanel userProcessContainer;
+	public ManageSuppliesJPanel(JPanel userProcessContainer,OrganizationDirectory organizationDir) {
+		this.userProcessContainer = userProcessContainer;
+        this.organizationDir = organizationDir;
 		initComponents();
 	}
 
@@ -205,7 +213,7 @@ public class ManageSuppliesJPanel extends javax.swing.JPanel {
                                         .addComponent(jLabel2)
                                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(requestTestJButton)
                                         .addComponent(backJButton))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -221,7 +229,9 @@ public class ManageSuppliesJPanel extends javax.swing.JPanel {
         }//GEN-LAST:event_btnRemovefromCartActionPerformed
 
         private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-
+userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
         }//GEN-LAST:event_backJButtonActionPerformed
 
         private void requestTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTestJButtonActionPerformed

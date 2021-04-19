@@ -5,6 +5,11 @@
  */
 package ui.CustomerRole;
 
+import Business.EcoSystem;
+import java.awt.CardLayout;
+import java.awt.Component;
+import javax.swing.JPanel;
+
 /**
  *
  * @author bidar
@@ -14,7 +19,11 @@ public class RetailJPanel extends javax.swing.JPanel {
 	/**
 	 * Creates new form RetailJPanel
 	 */
-	public RetailJPanel() {
+	private JPanel userProcessContainer;
+        private EcoSystem ecosystem;
+	public RetailJPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
+		this.userProcessContainer = userProcessContainer;
+            this.ecosystem = ecosystem;
 		initComponents();
 	}
 
@@ -27,19 +36,117 @@ public class RetailJPanel extends javax.swing.JPanel {
         // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
         private void initComponents() {
 
+                lblTitle = new javax.swing.JLabel();
+                jComboBox1 = new javax.swing.JComboBox<>();
+                lblSelectCategory = new javax.swing.JLabel();
+                lblAvailableStores = new javax.swing.JLabel();
+                jScrollPane1 = new javax.swing.JScrollPane();
+                tblStoreDetails = new javax.swing.JTable();
+                btnConfirmOrder = new javax.swing.JButton();
+                backJButton = new javax.swing.JButton();
+
+                lblTitle.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+                lblTitle.setText("Please select required services from below");
+
+                jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Household Appliances", "Clothing", "Utensils", "Jewellery" }));
+
+                lblSelectCategory.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+                lblSelectCategory.setText("Select Category");
+
+                lblAvailableStores.setText("Below are the nearest local services available for you   . . ");
+
+                tblStoreDetails.setModel(new javax.swing.table.DefaultTableModel(
+                        new Object [][] {
+
+                        },
+                        new String [] {
+                                "Store Name", "Contact Number", "Address", "Street Address", "City", "ZipCode"
+                        }
+                ));
+                jScrollPane1.setViewportView(tblStoreDetails);
+
+                btnConfirmOrder.setText("View Details");
+
+                backJButton.setText("<<Back");
+                backJButton.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                backJButtonActionPerformed(evt);
+                        }
+                });
+
                 javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
                 this.setLayout(layout);
                 layout.setHorizontalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 630, Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(151, 151, 151)
+                                                .addComponent(btnConfirmOrder))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(backJButton)))
+                                .addGap(0, 351, Short.MAX_VALUE))
+                        .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addGap(50, 50, 50)
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addGroup(layout.createSequentialGroup()
+                                                                                .addComponent(lblSelectCategory)
+                                                                                .addGap(18, 18, 18)
+                                                                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                        .addComponent(lblAvailableStores)))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addGap(70, 70, 70)
+                                                                .addComponent(lblTitle)))
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addContainerGap())
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 492, Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(37, 37, 37)
+                                .addComponent(lblTitle)
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblSelectCategory)
+                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblAvailableStores)
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(2, 2, 2)
+                                .addComponent(btnConfirmOrder)
+                                .addGap(18, 18, 18)
+                                .addComponent(backJButton)
+                                .addContainerGap(162, Short.MAX_VALUE))
                 );
         }// </editor-fold>//GEN-END:initComponents
 
+        private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+userProcessContainer.remove(this);
+         Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        CustomerWorkAreaJPanel custAreajp = (CustomerWorkAreaJPanel) component;
+        
+
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+        }//GEN-LAST:event_backJButtonActionPerformed
+
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
+        private javax.swing.JButton backJButton;
+        private javax.swing.JButton btnConfirmOrder;
+        private javax.swing.JComboBox<String> jComboBox1;
+        private javax.swing.JScrollPane jScrollPane1;
+        private javax.swing.JLabel lblAvailableStores;
+        private javax.swing.JLabel lblSelectCategory;
+        private javax.swing.JLabel lblTitle;
+        private javax.swing.JTable tblStoreDetails;
         // End of variables declaration//GEN-END:variables
 }
