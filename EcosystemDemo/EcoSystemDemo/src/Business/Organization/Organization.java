@@ -6,6 +6,7 @@ package Business.Organization;
 
 import Business.Customer.CustomerDirectory;
 import Business.Employee.EmployeeDirectory;
+import Business.ItemCatalogue.ItemsDirectory;
 import Business.Role.Role;
 import Business.UserAccount.UserAccountDirectory;
 import Business.WorkQueue.WorkQueue;
@@ -29,6 +30,7 @@ public abstract class Organization {
     private EmployeeDirectory employeeDirectory;
     private CustomerDirectory customerdirectory;
     private UserAccountDirectory userAccountDirectory;
+    private ItemsDirectory itemsDirectory;
     private int organizationID;
     private int counter = 1;
     
@@ -55,6 +57,7 @@ public abstract class Organization {
         employeeDirectory = new EmployeeDirectory();
         userAccountDirectory = new UserAccountDirectory();
         customerdirectory = new CustomerDirectory();
+        itemsDirectory = new ItemsDirectory();
         organizationID = counter;
         counter++;
     }
@@ -69,6 +72,14 @@ public abstract class Organization {
         this.type = type;
     }
 
+    public ItemsDirectory getItemsDirectory() {
+        return itemsDirectory;
+    }
+
+    public void setItemsDirectory(ItemsDirectory itemsDirectory) {
+        this.itemsDirectory = itemsDirectory;
+    }
+    
     public String getPhone() {
         return phone;
     }

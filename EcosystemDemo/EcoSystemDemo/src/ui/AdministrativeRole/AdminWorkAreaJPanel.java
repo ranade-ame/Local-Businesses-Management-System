@@ -139,35 +139,35 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_manageOrganizationJButtonActionPerformed
 
         private void btnManageOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrdersActionPerformed
-                // TODO add your handling code here:
-		ManageOrdersJPanel manageOrdersJPanel = new ManageOrdersJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
-        userProcessContainer.add("manageOrdersJPanel", manageOrdersJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+            // TODO add your handling code here:
+            ManageOrdersJPanel manageOrdersJPanel = new ManageOrdersJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
+            userProcessContainer.add("manageOrdersJPanel", manageOrdersJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
         }//GEN-LAST:event_btnManageOrdersActionPerformed
 
         private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
                 // TODO add your handling code here:
-			ManageSuppliesJPanel managesuppliesJPanel = new ManageSuppliesJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
-        userProcessContainer.add("manageOrdersJPanel", managesuppliesJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+            ManageSuppliesJPanel managesuppliesJPanel = new ManageSuppliesJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
+            userProcessContainer.add("manageOrdersJPanel", managesuppliesJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
         }//GEN-LAST:event_jButton1ActionPerformed
 
         private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-                // TODO add your handling code here:
-			ManageVendorsJPanel managevendorsJPanel = new ManageVendorsJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
-        userProcessContainer.add("manageOrdersJPanel", managevendorsJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+            // TODO add your handling code here:
+            ManageVendorsJPanel managevendorsJPanel = new ManageVendorsJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
+            userProcessContainer.add("manageOrdersJPanel", managevendorsJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
         }//GEN-LAST:event_jButton2ActionPerformed
 
         private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-                // TODO add your handling code here:
-		ManageMenuJPanel managemenuJPanel = new ManageMenuJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
-        userProcessContainer.add("managemenuJPanel", managemenuJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+            // TODO add your handling code here:
+            ManageMenuJPanel managemenuJPanel = new ManageMenuJPanel(userProcessContainer, enterprise);
+            userProcessContainer.add("managemenuJPanel", managemenuJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
         }//GEN-LAST:event_jButton3ActionPerformed
     
     

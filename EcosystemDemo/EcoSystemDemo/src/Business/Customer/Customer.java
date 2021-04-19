@@ -5,6 +5,9 @@
  */
 package Business.Customer;
 
+import Business.Orders.Orders;
+import java.util.ArrayList;
+
 /**
  *
  * @author ameya
@@ -22,6 +25,7 @@ public class Customer {
     private String password;
     private int id;
     private static int count = 1000;
+    private ArrayList<Orders> orderslist;
 
     public Customer(String name, String phone, int age, String streetaddress, String email, String username, String password, String country, String city, int zipcode) {
         this.name = name;
@@ -34,6 +38,7 @@ public class Customer {
         this.country = country;
         this.city = city;
         this.zipcode = zipcode;
+        this.orderslist = new ArrayList<Orders>();
         id = count;
         count++;
     }
@@ -44,6 +49,14 @@ public class Customer {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public ArrayList<Orders> getOrderslist() {
+        return orderslist;
+    }
+
+    public void setOrderslist(ArrayList<Orders> orderslist) {
+        this.orderslist = orderslist;
     }
     
     public String getEmail() {

@@ -20,7 +20,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
-                      <Component id="btnConfirmOrder" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnMenuDetails" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
@@ -72,7 +72,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="116" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-              <Component id="btnConfirmOrder" min="-2" max="-2" attributes="0"/>
+              <Component id="btnMenuDetails" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="backJButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="162" max="32767" attributes="0"/>
@@ -171,10 +171,13 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btnConfirmOrder">
+    <Component class="javax.swing.JButton" name="btnMenuDetails">
       <Properties>
         <Property name="text" type="java.lang.String" value="View Details"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMenuDetailsActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="backJButton">
       <Properties>

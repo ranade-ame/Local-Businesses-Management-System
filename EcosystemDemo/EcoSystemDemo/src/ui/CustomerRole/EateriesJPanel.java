@@ -12,6 +12,7 @@ import Business.Network.Network;
 import Business.Organization.OrganizationDirectory;
 import java.awt.CardLayout;
 import java.awt.Component;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -126,14 +127,31 @@ public class EateriesJPanel extends javax.swing.JPanel {
             userProcessContainer.remove(this);
             Component[] componentArray = userProcessContainer.getComponents();
             Component component = componentArray[componentArray.length - 1];
-            CustomerWorkAreaJPanel custAreajp = (CustomerWorkAreaJPanel) component;
+//            CustomerWorkAreaJPanel custAreajp = (CustomerWorkAreaJPanel) component;
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.previous(userProcessContainer);
         }//GEN-LAST:event_btnbackActionPerformed
 
     private void btnMenuDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuDetailsActionPerformed
         // TODO add your handling code here:
-        EateriesOrderJPanel eateriesorderJPanel = new EateriesOrderJPanel(userProcessContainer, ecosystem, customer);
+        int selectedRow = eateriesJTable.getSelectedRow();
+        if(selectedRow < 0) {
+            JOptionPane.showMessageDialog(null,"Please Select a row from table first", "Warining", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        String enterpriseName = eateriesJTable.getValueAt(selectedRow, 0).toString();
+        Enterprise enterprise = null;
+        for(Network n: ecosystem.getNetworkList()){
+                for(Enterprise e : n.getEnterpriseDirectory().getEnterpriseList()){
+                    if(e.getEnterpriseType().toString().equals("Eateries")){
+                        if(e.getName().equalsIgnoreCase(enterpriseName)){
+                            enterprise = e;
+                        }
+                    }
+                }
+            }
+        
+        EateriesOrderJPanel eateriesorderJPanel = new EateriesOrderJPanel(userProcessContainer, enterprise, customer);
         userProcessContainer.add("eateriesorderJPanel", eateriesorderJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);

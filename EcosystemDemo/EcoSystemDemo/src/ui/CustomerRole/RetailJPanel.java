@@ -11,6 +11,7 @@ import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import java.awt.CardLayout;
 import java.awt.Component;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -49,7 +50,7 @@ public class RetailJPanel extends javax.swing.JPanel {
         lblAvailableStores = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         retailJTable = new javax.swing.JTable();
-        btnConfirmOrder = new javax.swing.JButton();
+        btnMenuDetails = new javax.swing.JButton();
         backJButton = new javax.swing.JButton();
 
         lblTitle.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
@@ -72,7 +73,12 @@ public class RetailJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(retailJTable);
 
-        btnConfirmOrder.setText("View Details");
+        btnMenuDetails.setText("View Details");
+        btnMenuDetails.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuDetailsActionPerformed(evt);
+            }
+        });
 
         backJButton.setText("<<Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +95,7 @@ public class RetailJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(151, 151, 151)
-                        .addComponent(btnConfirmOrder))
+                        .addComponent(btnMenuDetails))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(backJButton)))
@@ -127,7 +133,7 @@ public class RetailJPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2)
-                .addComponent(btnConfirmOrder)
+                .addComponent(btnMenuDetails)
                 .addGap(18, 18, 18)
                 .addComponent(backJButton)
                 .addContainerGap(162, Short.MAX_VALUE))
@@ -138,15 +144,40 @@ public class RetailJPanel extends javax.swing.JPanel {
             userProcessContainer.remove(this);
             Component[] componentArray = userProcessContainer.getComponents();
             Component component = componentArray[componentArray.length - 1];
-            CustomerWorkAreaJPanel custAreajp = (CustomerWorkAreaJPanel) component;
+//            CustomerWorkAreaJPanel custAreajp = (CustomerWorkAreaJPanel) component;
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.previous(userProcessContainer);
         }//GEN-LAST:event_backJButtonActionPerformed
 
+    private void btnMenuDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuDetailsActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = retailJTable.getSelectedRow();
+        if(selectedRow < 0) {
+            JOptionPane.showMessageDialog(null,"Please Select a row from table first", "Warining", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        String enterpriseName = retailJTable.getValueAt(selectedRow, 0).toString();
+        Enterprise enterprise = null;
+        for(Network n: ecosystem.getNetworkList()){
+                for(Enterprise e : n.getEnterpriseDirectory().getEnterpriseList()){
+                    if(e.getEnterpriseType().toString().equals("Retail")){
+                        if(e.getName().equalsIgnoreCase(enterpriseName)){
+                            enterprise = e;
+                        }
+                    }
+                }
+            }
+        
+        RetailOrdersJPanel retailorderJPanel = new RetailOrdersJPanel(userProcessContainer, enterprise, customer);
+        userProcessContainer.add("retailorderJPanel", retailorderJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnMenuDetailsActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
-    private javax.swing.JButton btnConfirmOrder;
+    private javax.swing.JButton btnMenuDetails;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAvailableStores;

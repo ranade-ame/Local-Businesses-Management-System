@@ -136,7 +136,7 @@ public class ServicesJPanel extends javax.swing.JPanel {
             userProcessContainer.remove(this);
             Component[] componentArray = userProcessContainer.getComponents();
             Component component = componentArray[componentArray.length - 1];
-            CustomerWorkAreaJPanel custAreajp = (CustomerWorkAreaJPanel) component;
+//            CustomerWorkAreaJPanel custAreajp = (CustomerWorkAreaJPanel) component;
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.previous(userProcessContainer);                
         }//GEN-LAST:event_jButton1ActionPerformed

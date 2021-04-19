@@ -28,19 +28,20 @@ public class NewCustomerRegistrationJPanel extends javax.swing.JPanel {
 	 * Creates new form NewCustomerRegistrationJPanel
 	 */
 	private JPanel userProcessContainer;
-    private EcoSystem ecosystem;
-    private Employee employee;
-    private Customer customer;
-    private CustomerDirectory customerdirectory;
+        private EcoSystem ecosystem;
+        private Employee employee;
+        private Customer customer;
+        private CustomerDirectory customerdirectory;
 //	public NewCustomerRegistrationJPanel() {
 //		initComponents();
 //	}
 
 	public NewCustomerRegistrationJPanel(JPanel container, EcoSystem ecosystem) {
-		this.userProcessContainer = userProcessContainer;
-         this.ecosystem = ecosystem;
-	 this.customerdirectory = ecosystem.getCustomerdirectory();
-		initComponents();
+            initComponents();
+            this.userProcessContainer = userProcessContainer;
+            this.ecosystem = ecosystem;
+            this.customerdirectory = ecosystem.getCustomerdirectory();
+            
 		
 	}
 
