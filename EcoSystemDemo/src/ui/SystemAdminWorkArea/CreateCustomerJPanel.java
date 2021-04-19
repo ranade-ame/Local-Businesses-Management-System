@@ -342,8 +342,8 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Phone Number must be 10 digits", "Warining", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        if(tfZipcode.getText().length() != 5){
-            JOptionPane.showMessageDialog(null, "Zip code must be 5 digits", "Warining", JOptionPane.WARNING_MESSAGE);
+        if(tfZipcode.getText().length() != 5 || tfZipcode.getText().length() != 6){
+            JOptionPane.showMessageDialog(null, "Zip code must be 5 or 6 digits", "Warining", JOptionPane.WARNING_MESSAGE);
             return;
         }
         

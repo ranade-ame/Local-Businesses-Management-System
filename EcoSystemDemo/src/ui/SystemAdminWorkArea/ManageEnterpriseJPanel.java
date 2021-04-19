@@ -9,6 +9,7 @@ import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import java.awt.CardLayout;
 import java.awt.Component;
+import static java.lang.Integer.parseInt;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -40,10 +41,14 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
         for (Network network : system.getNetworkList()) {
             for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
-                Object[] row = new Object[3];
+                Object[] row = new Object[7];
                 row[0] = enterprise.getName();
                 row[1] = network.getName();
                 row[2] = enterprise.getEnterpriseType().getValue();
+                row[3] = enterprise.getStreetaddress();
+                row[4] = enterprise.getCountry();
+                row[5] = enterprise.getCity();
+                row[6] = enterprise.getZipcode();
 
                 model.addRow(row);
             }
@@ -305,8 +310,14 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         }
 
         String name = nameJTextField.getText();
+        String streetaddress = tfStreetAddress.getText();
+        String emailaddress = tfEmail.getText();
+        String country = tfCountry.getText();
+        String city = tfCity.getText();
+        int zipcode = parseInt(tfZipcode.getText());
+        String phone = tfPhoneNumber.getText();
 
-        Enterprise enterprise = network.getEnterpriseDirectory().createAndAddEnterprise(name, type);
+        Enterprise enterprise = network.getEnterpriseDirectory().createAndAddEnterprise(name, streetaddress, city, country, zipcode, emailaddress, type, phone);
 
         populateTable();
 
@@ -314,11 +325,10 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
         userProcessContainer.remove(this);
-         Component[] componentArray = userProcessContainer.getComponents();
+        Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
-        SystemAdminWorkAreaJPanel sysAdminwjp = (SystemAdminWorkAreaJPanel) component;
-        sysAdminwjp.populateTree();
-
+//        SystemAdminWorkAreaJPanel sysAdminwjp = (SystemAdminWorkAreaJPanel) component;
+//        sysAdminwjp.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed
