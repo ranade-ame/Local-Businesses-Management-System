@@ -17,6 +17,78 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
+<<<<<<< HEAD:EcosystemDemo/EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
+=======
+<<<<<<< Updated upstream
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="595" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="backJButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="271" max="32767" attributes="0"/>
+                              <Component id="submitJButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="networkJComboBox" max="32767" attributes="0"/>
+                                          <Component id="enterpriseTypeJComboBox" max="32767" attributes="0"/>
+                                          <Component id="nameJTextField" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel4" min="-2" pref="91" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                          <Component id="tfEmail" min="-2" pref="131" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel5" min="-2" pref="91" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                          <Component id="tfPhoneNumber" min="-2" pref="131" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel6" min="-2" pref="91" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                          <Component id="tfStreetAddress" min="-2" pref="131" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel9" min="-2" pref="91" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                          <Component id="tfCountry" min="-2" pref="131" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel10" min="-2" pref="91" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                          <Component id="tfCity" min="-2" pref="131" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel11" min="-2" pref="91" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                          <Component id="tfZipcode" min="-2" pref="131" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+=======
+>>>>>>> Abhishek:EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="595" max="-2" attributes="0"/>
           </Group>
@@ -81,11 +153,43 @@
               <Component id="btnDelete" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="76" pref="76" max="-2" attributes="0"/>
               <Component id="submitJButton" min="-2" max="-2" attributes="0"/>
+<<<<<<< HEAD:EcosystemDemo/EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
+=======
+>>>>>>> Stashed changes
+>>>>>>> Abhishek:EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD:EcosystemDemo/EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
+          <Group type="102" attributes="0">
+              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+=======
+<<<<<<< Updated upstream
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+>>>>>>> Abhishek:EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
+              <Component id="jScrollPane1" min="-2" pref="95" max="-2" attributes="0"/>
+              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="networkJComboBox" min="-2" max="-2" attributes="0"/>
+              </Group>
+<<<<<<< HEAD:EcosystemDemo/EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
+              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="enterpriseTypeJComboBox" min="-2" max="-2" attributes="0"/>
+=======
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="enterpriseTypeJComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+=======
           <Group type="102" attributes="0">
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="95" max="-2" attributes="0"/>
@@ -93,11 +197,19 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <Component id="networkJComboBox" min="-2" max="-2" attributes="0"/>
+>>>>>>> Abhishek:EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
               </Group>
               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+<<<<<<< HEAD:EcosystemDemo/EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="nameJTextField" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
+=======
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="enterpriseTypeJComboBox" min="-2" max="-2" attributes="0"/>
@@ -111,6 +223,24 @@
                   <Component id="nameJTextField" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel4" min="-2" pref="27" max="-2" attributes="0"/>
+                  <Component id="tfEmail" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel5" min="-2" pref="27" max="-2" attributes="0"/>
+                  <Component id="tfPhoneNumber" min="-2" max="-2" attributes="0"/>
+>>>>>>> Stashed changes
+              </Group>
+              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel6" min="-2" pref="27" max="-2" attributes="0"/>
+                  <Component id="tfStreetAddress" min="-2" max="-2" attributes="0"/>
+              </Group>
+<<<<<<< Updated upstream
+              <EmptySpace pref="21" max="32767" attributes="0"/>
+>>>>>>> Abhishek:EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel4" min="-2" pref="27" max="-2" attributes="0"/>
                   <Component id="tfEmail" min="-2" max="-2" attributes="0"/>
@@ -151,7 +281,40 @@
                       </Group>
                   </Group>
               </Group>
+<<<<<<< HEAD:EcosystemDemo/EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
               <EmptySpace pref="49" max="32767" attributes="0"/>
+=======
+              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+=======
+              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel9" min="-2" pref="27" max="-2" attributes="0"/>
+                  <Component id="tfCountry" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel10" min="-2" pref="27" max="-2" attributes="0"/>
+                  <Component id="tfCity" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel11" min="-2" pref="27" max="-2" attributes="0"/>
+                  <Component id="tfZipcode" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btnDelete" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="backJButton" min="-2" max="-2" attributes="0"/>
+                          <Component id="submitJButton" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="49" max="32767" attributes="0"/>
+>>>>>>> Stashed changes
+>>>>>>> Abhishek:EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
           </Group>
       </Group>
     </DimensionLayout>
@@ -340,6 +503,11 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfZipcodeActionPerformed"/>
       </Events>
     </Component>
+<<<<<<< HEAD:EcosystemDemo/EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Abhishek:EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
     <Component class="javax.swing.JButton" name="btnDelete">
       <Properties>
         <Property name="text" type="java.lang.String" value="Delete"/>
@@ -348,5 +516,9 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteActionPerformed"/>
       </Events>
     </Component>
+<<<<<<< HEAD:EcosystemDemo/EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
+=======
+>>>>>>> Stashed changes
+>>>>>>> Abhishek:EcoSystemDemo/src/ui/SystemAdminWorkArea/ManageEnterpriseJPanel.form
   </SubComponents>
 </Form>

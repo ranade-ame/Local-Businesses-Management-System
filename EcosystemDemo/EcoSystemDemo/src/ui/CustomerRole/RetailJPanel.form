@@ -20,7 +20,15 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
+<<<<<<< HEAD:EcosystemDemo/EcoSystemDemo/src/ui/CustomerRole/RetailJPanel.form
                       <Component id="btnMenuDetails" min="-2" max="-2" attributes="0"/>
+=======
+<<<<<<< Updated upstream
+                      <Component id="btnConfirmOrder" min="-2" max="-2" attributes="0"/>
+=======
+                      <Component id="btnMenuDetails" min="-2" max="-2" attributes="0"/>
+>>>>>>> Stashed changes
+>>>>>>> Abhishek:EcoSystemDemo/src/ui/CustomerRole/RetailJPanel.form
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
@@ -72,7 +80,15 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="116" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+<<<<<<< HEAD:EcosystemDemo/EcoSystemDemo/src/ui/CustomerRole/RetailJPanel.form
               <Component id="btnMenuDetails" min="-2" max="-2" attributes="0"/>
+=======
+<<<<<<< Updated upstream
+              <Component id="btnConfirmOrder" min="-2" max="-2" attributes="0"/>
+=======
+              <Component id="btnMenuDetails" min="-2" max="-2" attributes="0"/>
+>>>>>>> Stashed changes
+>>>>>>> Abhishek:EcoSystemDemo/src/ui/CustomerRole/RetailJPanel.form
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="backJButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="162" max="32767" attributes="0"/>
@@ -124,12 +140,29 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
+<<<<<<< HEAD:EcosystemDemo/EcoSystemDemo/src/ui/CustomerRole/RetailJPanel.form
+        <Component class="javax.swing.JTable" name="retailJTable">
+=======
+<<<<<<< Updated upstream
+        <Component class="javax.swing.JTable" name="tblStoreDetails">
+>>>>>>> Abhishek:EcoSystemDemo/src/ui/CustomerRole/RetailJPanel.form
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="5" rowCount="0">
+                <Column editable="true" title="Store Name" type="java.lang.Object"/>
+                <Column editable="true" title="Contact Number" type="java.lang.Object"/>
+<<<<<<< HEAD:EcosystemDemo/EcoSystemDemo/src/ui/CustomerRole/RetailJPanel.form
+=======
+                <Column editable="true" title="Address" type="java.lang.Object"/>
+=======
         <Component class="javax.swing.JTable" name="retailJTable">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="5" rowCount="0">
                 <Column editable="true" title="Store Name" type="java.lang.Object"/>
                 <Column editable="true" title="Contact Number" type="java.lang.Object"/>
+>>>>>>> Stashed changes
+>>>>>>> Abhishek:EcoSystemDemo/src/ui/CustomerRole/RetailJPanel.form
                 <Column editable="true" title="Street Address" type="java.lang.Object"/>
                 <Column editable="true" title="City" type="java.lang.Object"/>
                 <Column editable="true" title="ZipCode" type="java.lang.Object"/>
@@ -162,6 +195,17 @@
                   <Editor/>
                   <Renderer/>
                 </Column>
+<<<<<<< HEAD:EcosystemDemo/EcoSystemDemo/src/ui/CustomerRole/RetailJPanel.form
+=======
+<<<<<<< Updated upstream
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+=======
+>>>>>>> Stashed changes
+>>>>>>> Abhishek:EcoSystemDemo/src/ui/CustomerRole/RetailJPanel.form
               </TableColumnModel>
             </Property>
             <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
@@ -171,6 +215,7 @@
         </Component>
       </SubComponents>
     </Container>
+<<<<<<< HEAD:EcosystemDemo/EcoSystemDemo/src/ui/CustomerRole/RetailJPanel.form
     <Component class="javax.swing.JButton" name="btnMenuDetails">
       <Properties>
         <Property name="text" type="java.lang.String" value="View Details"/>
@@ -178,6 +223,22 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMenuDetailsActionPerformed"/>
       </Events>
+=======
+<<<<<<< Updated upstream
+    <Component class="javax.swing.JButton" name="btnConfirmOrder">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="View Details"/>
+      </Properties>
+=======
+    <Component class="javax.swing.JButton" name="btnMenuDetails">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="View Details"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMenuDetailsActionPerformed"/>
+      </Events>
+>>>>>>> Stashed changes
+>>>>>>> Abhishek:EcoSystemDemo/src/ui/CustomerRole/RetailJPanel.form
     </Component>
     <Component class="javax.swing.JButton" name="backJButton">
       <Properties>

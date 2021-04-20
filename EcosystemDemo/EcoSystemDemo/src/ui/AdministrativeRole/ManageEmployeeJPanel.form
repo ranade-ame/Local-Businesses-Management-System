@@ -86,7 +86,11 @@
                       <Component id="addJButton" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
+<<<<<<< Updated upstream
               <EmptySpace pref="125" max="32767" attributes="0"/>
+=======
+              <EmptySpace pref="193" max="32767" attributes="0"/>
+>>>>>>> Stashed changes
           </Group>
       </Group>
     </DimensionLayout>
@@ -147,7 +151,11 @@
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
+<<<<<<< Updated upstream
                       <EmptySpace pref="24" max="32767" attributes="0"/>
+=======
+                      <EmptySpace pref="28" max="32767" attributes="0"/>
+>>>>>>> Stashed changes
                       <Component id="backJButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   </Group>
