@@ -57,6 +57,7 @@ public class ElectricianProcessWorkRequestJPanel extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(backJButton)
                                         .addComponent(jLabel1))
+<<<<<<< Updated upstream
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGap(46, 46, 46)
@@ -66,6 +67,13 @@ public class ElectricianProcessWorkRequestJPanel extends javax.swing.JPanel {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
                                                 .addComponent(submitJButton)
                                                 .addGap(63, 63, 63))))
+=======
+                                .addGap(46, 46, 46)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(resultJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(submitJButton))
+                                .addContainerGap(329, Short.MAX_VALUE))
+>>>>>>> Stashed changes
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -78,7 +86,11 @@ public class ElectricianProcessWorkRequestJPanel extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(submitJButton)
                                         .addComponent(backJButton))
+<<<<<<< Updated upstream
                                 .addContainerGap(169, Short.MAX_VALUE))
+=======
+                                .addContainerGap(342, Short.MAX_VALUE))
+>>>>>>> Stashed changes
                 );
         }// </editor-fold>//GEN-END:initComponents
 
