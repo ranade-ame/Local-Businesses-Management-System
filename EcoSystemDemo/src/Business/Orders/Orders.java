@@ -13,7 +13,8 @@ import java.util.ArrayList;
  * @author ameya
  */
 public class Orders {
-    int orderID;
+    private int orderID;
+    private String status;
     private String enterpriseName;
     private String customerName;
     private ArrayList<Items> orderlist;
@@ -29,8 +30,8 @@ public class Orders {
         this.totalprice = totalprice;
         this.customerAddress = customerAddress;
         this.enterpriseAddress = enterpriseAddress;
-        this.orderID = counter;
-        counter++;
+        this.orderID = ++counter;
+        
     }
 
     public int getOrderID() {
@@ -41,6 +42,14 @@ public class Orders {
         this.orderID = orderID;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
     public String getEnterpriseName() {
         return enterpriseName;
     }

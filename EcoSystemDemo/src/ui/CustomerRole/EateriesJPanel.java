@@ -5,24 +5,16 @@
  */
 package ui.CustomerRole;
 
-<<<<<<< Updated upstream
-import Business.EcoSystem;
-=======
 import Business.Customer.Customer;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
->>>>>>> Stashed changes
 import Business.Network.Network;
 import Business.Organization.OrganizationDirectory;
 import java.awt.CardLayout;
 import java.awt.Component;
-<<<<<<< Updated upstream
-import javax.swing.JPanel;
-=======
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
->>>>>>> Stashed changes
 
 /**
  *
@@ -35,15 +27,6 @@ public class EateriesJPanel extends javax.swing.JPanel {
 	 */
 	private JPanel userProcessContainer;
         private EcoSystem ecosystem;
-<<<<<<< Updated upstream
-        
-	public EateriesJPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
-            this.userProcessContainer = userProcessContainer;
-            this.ecosystem = ecosystem;
-
-            
-            initComponents();
-=======
         private Customer customer;
         
 	public EateriesJPanel(JPanel userProcessContainer, EcoSystem ecosystem, Customer customer) {
@@ -53,7 +36,6 @@ public class EateriesJPanel extends javax.swing.JPanel {
             this.customer = customer;
             populateTable();
             
->>>>>>> Stashed changes
 	}
 
 	/**
@@ -65,42 +47,18 @@ public class EateriesJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<<<<<<< Updated upstream
-                enterpriseLabel = new javax.swing.JLabel();
-                valueLabel = new javax.swing.JLabel();
-                jScrollPane1 = new javax.swing.JScrollPane();
-                tblcafeslist = new javax.swing.JTable();
-                btnMenuDetails = new javax.swing.JButton();
-                btnback = new javax.swing.JButton();
-=======
         enterpriseLabel = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         eateriesJTable = new javax.swing.JTable();
         btnMenuDetails = new javax.swing.JButton();
         btnback = new javax.swing.JButton();
->>>>>>> Stashed changes
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Hi");
 
         valueLabel.setText("<value>");
 
-<<<<<<< Updated upstream
-                tblcafeslist.setModel(new javax.swing.table.DefaultTableModel(
-                        new Object [][] {
-                                {null, null, null, null, null, null},
-                                {null, null, null, null, null, null}
-                        },
-                        new String [] {
-                                "Restaurant Name", "Contact Number", "Address", "Street Address", "City", "ZipCode"
-                        }
-                ));
-                jScrollPane1.setViewportView(tblcafeslist);
-                if (tblcafeslist.getColumnModel().getColumnCount() > 0) {
-                        tblcafeslist.getColumnModel().getColumn(5).setResizable(false);
-                }
-=======
         eateriesJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -125,7 +83,6 @@ public class EateriesJPanel extends javax.swing.JPanel {
                 btnbackActionPerformed(evt);
             }
         });
->>>>>>> Stashed changes
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -165,74 +122,6 @@ public class EateriesJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< Updated upstream
-                btnback.setText("<< Back");
-                btnback.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                btnbackActionPerformed(evt);
-                        }
-                });
-
-                javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-                this.setLayout(layout);
-                layout.setHorizontalGroup(
-                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(76, 76, 76)
-                                                .addComponent(enterpriseLabel)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(valueLabel))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(26, 26, 26)
-                                                .addComponent(btnback)
-                                                .addGap(127, 127, 127)
-                                                .addComponent(btnMenuDetails)))
-                                .addContainerGap(242, Short.MAX_VALUE))
-                        .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jScrollPane1))
-                );
-                layout.setVerticalGroup(
-                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(valueLabel)
-                                        .addComponent(enterpriseLabel))
-                                .addGap(18, 18, 18)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
-                                .addGap(28, 28, 28)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(btnMenuDetails)
-                                        .addComponent(btnback))
-                                .addGap(120, 120, 120))
-                );
-        }// </editor-fold>//GEN-END:initComponents
-
-        private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
-                // TODO add your handling code here:
-		userProcessContainer.remove(this);
-         Component[] componentArray = userProcessContainer.getComponents();
-        Component component = componentArray[componentArray.length - 1];
-        CustomerWorkAreaJPanel custAreajp = (CustomerWorkAreaJPanel) component;
-        
-
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-        }//GEN-LAST:event_btnbackActionPerformed
-
-
-        // Variables declaration - do not modify//GEN-BEGIN:variables
-        private javax.swing.JButton btnMenuDetails;
-        private javax.swing.JButton btnback;
-        private javax.swing.JLabel enterpriseLabel;
-        private javax.swing.JScrollPane jScrollPane1;
-        private javax.swing.JTable tblcafeslist;
-        private javax.swing.JLabel valueLabel;
-        // End of variables declaration//GEN-END:variables
-=======
         private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
             // TODO add your handling code here:
             userProcessContainer.remove(this);
@@ -298,5 +187,4 @@ public class EateriesJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     
->>>>>>> Stashed changes
 }
