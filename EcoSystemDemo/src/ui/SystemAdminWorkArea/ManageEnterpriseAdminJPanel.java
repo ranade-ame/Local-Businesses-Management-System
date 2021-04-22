@@ -12,6 +12,7 @@ import Business.Role.AdminRole;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -284,6 +285,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         String name = nameJTextField.getText();
         Employee employee = enterprise.getEmployeeDirectory().createEmployee(name);
         UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new AdminRole());
+	    JOptionPane.showMessageDialog(nameJTextField, "Enterprise Admin Added Successfully");
         populateTable();
         
     }//GEN-LAST:event_submitJButtonActionPerformed

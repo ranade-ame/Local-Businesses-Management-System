@@ -71,7 +71,6 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                 jSplitPane1 = new javax.swing.JSplitPane();
                 jPanel2 = new javax.swing.JPanel();
                 jPanel1 = new javax.swing.JPanel();
-                jLabel1 = new javax.swing.JLabel();
                 valueLabel = new javax.swing.JLabel();
                 enterpriseLabel = new javax.swing.JLabel();
                 btnEateriespanel = new javax.swing.JButton();
@@ -80,6 +79,7 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                 lblorder = new javax.swing.JLabel();
                 btnEssentials = new javax.swing.JButton();
                 btnRetail = new javax.swing.JButton();
+                jLabel1 = new javax.swing.JLabel();
 
                 setBackground(new java.awt.Color(255, 255, 255));
 
@@ -103,122 +103,79 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                 jSplitPane1.setLeftComponent(jPanel2);
 
                 jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-                jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Icons/userImageOpaque.png"))); // NOI18N
+                jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
                 valueLabel.setForeground(new java.awt.Color(0, 102, 255));
                 valueLabel.setText("<value>");
+                jPanel1.add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 50, -1, -1));
 
                 enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
                 enterpriseLabel.setForeground(new java.awt.Color(0, 102, 255));
                 enterpriseLabel.setText("Hi");
+                jPanel1.add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 40, -1, -1));
 
                 btnEateriespanel.setBackground(new java.awt.Color(0, 102, 204));
                 btnEateriespanel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+                btnEateriespanel.setForeground(new java.awt.Color(255, 255, 255));
                 btnEateriespanel.setText("Eateries");
                 btnEateriespanel.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 btnEateriespanelActionPerformed(evt);
                         }
                 });
+                jPanel1.add(btnEateriespanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, 149, 30));
 
                 btnHouseholdServices.setBackground(new java.awt.Color(0, 102, 204));
                 btnHouseholdServices.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-                btnHouseholdServices.setText("Household Services");
+                btnHouseholdServices.setForeground(new java.awt.Color(255, 255, 255));
+                btnHouseholdServices.setText("Services");
                 btnHouseholdServices.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 btnHouseholdServicesActionPerformed(evt);
                         }
                 });
+                jPanel1.add(btnHouseholdServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 150, 30));
 
                 btnyourorders.setBackground(new java.awt.Color(0, 102, 204));
                 btnyourorders.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+                btnyourorders.setForeground(new java.awt.Color(255, 255, 255));
                 btnyourorders.setText("Your Orders");
                 btnyourorders.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 btnyourordersActionPerformed(evt);
                         }
                 });
+                jPanel1.add(btnyourorders, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 320, 149, 30));
 
                 lblorder.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
                 lblorder.setForeground(new java.awt.Color(0, 102, 255));
                 lblorder.setText("What would you like to buy today?");
+                jPanel1.add(lblorder, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, -1, 61));
 
                 btnEssentials.setBackground(new java.awt.Color(0, 102, 204));
                 btnEssentials.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+                btnEssentials.setForeground(new java.awt.Color(255, 255, 255));
                 btnEssentials.setText("Essentials");
                 btnEssentials.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 btnEssentialsActionPerformed(evt);
                         }
                 });
+                jPanel1.add(btnEssentials, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 149, 30));
 
                 btnRetail.setBackground(new java.awt.Color(0, 102, 204));
                 btnRetail.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+                btnRetail.setForeground(new java.awt.Color(255, 255, 255));
                 btnRetail.setText("Retail");
                 btnRetail.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 btnRetailActionPerformed(evt);
                         }
                 });
+                jPanel1.add(btnRetail, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, 149, 30));
 
-                javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-                jPanel1.setLayout(jPanel1Layout);
-                jPanel1Layout.setHorizontalGroup(
-                        jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 786, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(83, 83, 83)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addComponent(enterpriseLabel)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(valueLabel))
-                                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addGap(135, 135, 135)
-                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                                .addComponent(btnHouseholdServices, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                .addComponent(btnEateriespanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                .addComponent(btnRetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                .addComponent(btnEssentials, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                .addComponent(btnyourorders, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addGap(116, 116, 116)
-                                                        .addComponent(lblorder)))
-                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                );
-
-                jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnEateriespanel, btnEssentials, btnHouseholdServices, btnRetail, btnyourorders});
-
-                jPanel1Layout.setVerticalGroup(
-                        jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(89, 89, 89)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                .addComponent(valueLabel)
-                                                .addComponent(enterpriseLabel))
-                                        .addGap(8, 8, 8)
-                                        .addComponent(lblorder, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(66, 66, 66)
-                                        .addComponent(btnEateriespanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(28, 28, 28)
-                                        .addComponent(btnHouseholdServices, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(33, 33, 33)
-                                        .addComponent(btnRetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(33, 33, 33)
-                                        .addComponent(btnEssentials, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(30, 30, 30)
-                                        .addComponent(btnyourorders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(89, 89, 89)))
-                );
+                jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Icons/userImageOpaque.png"))); // NOI18N
+                jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, 660, 480));
 
                 jSplitPane1.setRightComponent(jPanel1);
 

@@ -44,9 +44,6 @@ public class EssentialsJPanel extends javax.swing.JPanel {
         // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
         private void initComponents() {
 
-                lblTitle = new javax.swing.JLabel();
-                jComboBox1 = new javax.swing.JComboBox<>();
-                lblSelectCategory = new javax.swing.JLabel();
                 lblAvailableStores = new javax.swing.JLabel();
                 jScrollPane1 = new javax.swing.JScrollPane();
                 essentialsJTable = new javax.swing.JTable();
@@ -57,20 +54,9 @@ public class EssentialsJPanel extends javax.swing.JPanel {
                 setBackground(new java.awt.Color(255, 255, 255));
                 setForeground(new java.awt.Color(0, 102, 204));
 
-                lblTitle.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-                lblTitle.setForeground(new java.awt.Color(0, 102, 204));
-                lblTitle.setText("Please select required services from below");
-
-                jComboBox1.setBackground(new java.awt.Color(0, 102, 204));
-                jComboBox1.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-                jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fresh Vegetables and Fruits", "Dairy Products", "Groceries", "Pharmacy" }));
-
-                lblSelectCategory.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-                lblSelectCategory.setForeground(new java.awt.Color(0, 102, 204));
-                lblSelectCategory.setText("Select Category");
-
+                lblAvailableStores.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
                 lblAvailableStores.setForeground(new java.awt.Color(0, 102, 204));
-                lblAvailableStores.setText("Below are the nearest local services available for you   . . ");
+                lblAvailableStores.setText("Below are the nearest local services available for you ");
 
                 essentialsJTable.setModel(new javax.swing.table.DefaultTableModel(
                         new Object [][] {
@@ -84,6 +70,7 @@ public class EssentialsJPanel extends javax.swing.JPanel {
 
                 btnMenuDetails.setBackground(new java.awt.Color(0, 102, 204));
                 btnMenuDetails.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+                btnMenuDetails.setForeground(new java.awt.Color(255, 255, 255));
                 btnMenuDetails.setText("View Details");
                 btnMenuDetails.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,33 +92,18 @@ public class EssentialsJPanel extends javax.swing.JPanel {
                 layout.setHorizontalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 620, Short.MAX_VALUE)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                        .addGroup(layout.createSequentialGroup()
-                                                                                .addGap(117, 117, 117)
-                                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                        .addGroup(layout.createSequentialGroup()
-                                                                                                .addComponent(lblSelectCategory)
-                                                                                                .addGap(18, 18, 18)
-                                                                                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                                        .addComponent(lblAvailableStores)))
-                                                                        .addGroup(layout.createSequentialGroup()
-                                                                                .addGap(138, 138, 138)
-                                                                                .addComponent(lblTitle))
-                                                                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                                                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addGap(14, 14, 14))))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(258, 258, 258)
-                                                .addComponent(btnMenuDetails)
-                                                .addGap(0, 0, Short.MAX_VALUE)))
-                                .addContainerGap())
+                                .addContainerGap()
+                                .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(39, 39, 39)
+                                .addComponent(lblAvailableStores)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(24, 24, 24))
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(258, 258, 258)
+                                .addComponent(btnMenuDetails)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,20 +112,16 @@ public class EssentialsJPanel extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addGroup(layout.createSequentialGroup()
                                                 .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(lblTitle)
-                                                .addGap(18, 18, 18)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(lblSelectCategory)
-                                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(lblAvailableStores))
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addGap(99, 99, 99))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                        .addGap(24, 24, 24)
+                                                        .addComponent(lblAvailableStores, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnMenuDetails)
-                                .addContainerGap(170, Short.MAX_VALUE))
+                                .addContainerGap(181, Short.MAX_VALUE))
                 );
         }// </editor-fold>//GEN-END:initComponents
 
@@ -196,12 +164,9 @@ public class EssentialsJPanel extends javax.swing.JPanel {
         private javax.swing.JButton backJButton;
         private javax.swing.JButton btnMenuDetails;
         private javax.swing.JTable essentialsJTable;
-        private javax.swing.JComboBox<String> jComboBox1;
         private javax.swing.JLabel jLabel2;
         private javax.swing.JScrollPane jScrollPane1;
         private javax.swing.JLabel lblAvailableStores;
-        private javax.swing.JLabel lblSelectCategory;
-        private javax.swing.JLabel lblTitle;
         // End of variables declaration//GEN-END:variables
 
     private void populateTable() {

@@ -93,7 +93,8 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageEnterprise = new javax.swing.JButton();
                 btnManageAdmin = new javax.swing.JButton();
                 manageCustomer = new javax.swing.JButton();
-                jLabel2 = new javax.swing.JLabel();
+                jButton1 = new javax.swing.JButton();
+                jLabel3 = new javax.swing.JLabel();
 
                 setBackground(new java.awt.Color(255, 255, 255));
                 setLayout(new java.awt.BorderLayout());
@@ -111,96 +112,87 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 jPanel1.setLayout(jPanel1Layout);
                 jPanel1Layout.setHorizontalGroup(
                         jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
                 );
                 jPanel1Layout.setVerticalGroup(
                         jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 492, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE)
                 );
 
                 jSplitPane.setLeftComponent(jPanel1);
 
                 jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+                jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+                jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+                jLabel1.setForeground(new java.awt.Color(0, 102, 204));
                 jLabel1.setText("Selected Node:");
+                jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 50, -1, -1));
 
+                lblSelectedNode.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+                lblSelectedNode.setForeground(new java.awt.Color(0, 102, 204));
                 lblSelectedNode.setText("<View_selected_node>");
+                jPanel2.add(lblSelectedNode, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 50, -1, -1));
 
+                btnManageNetwork.setBackground(new java.awt.Color(0, 102, 204));
+                btnManageNetwork.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+                btnManageNetwork.setForeground(new java.awt.Color(255, 255, 255));
                 btnManageNetwork.setText("Manage Network");
                 btnManageNetwork.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 btnManageNetworkActionPerformed(evt);
                         }
                 });
+                jPanel2.add(btnManageNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 190, 180, -1));
 
+                btnManageEnterprise.setBackground(new java.awt.Color(0, 102, 204));
+                btnManageEnterprise.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+                btnManageEnterprise.setForeground(new java.awt.Color(255, 255, 255));
                 btnManageEnterprise.setText("Manage Enterprise");
                 btnManageEnterprise.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 btnManageEnterpriseActionPerformed(evt);
                         }
                 });
+                jPanel2.add(btnManageEnterprise, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, 180, -1));
 
+                btnManageAdmin.setBackground(new java.awt.Color(0, 102, 204));
+                btnManageAdmin.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+                btnManageAdmin.setForeground(new java.awt.Color(255, 255, 255));
                 btnManageAdmin.setText("Manage Enterprise Admin");
                 btnManageAdmin.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 btnManageAdminActionPerformed(evt);
                         }
                 });
+                jPanel2.add(btnManageAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, -1, -1));
 
+                manageCustomer.setBackground(new java.awt.Color(0, 102, 204));
+                manageCustomer.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+                manageCustomer.setForeground(new java.awt.Color(255, 255, 255));
                 manageCustomer.setText("Manage Customers");
                 manageCustomer.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 manageCustomerActionPerformed(evt);
                         }
                 });
+                jPanel2.add(manageCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 310, 180, -1));
 
-                jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Icons/05.png"))); // NOI18N
+                jButton1.setBackground(new java.awt.Color(0, 102, 204));
+                jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+                jButton1.setForeground(new java.awt.Color(255, 255, 255));
+                jButton1.setText("View Statistics");
+                jButton1.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                jButton1ActionPerformed(evt);
+                        }
+                });
+                jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, 180, -1));
 
-                javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-                jPanel2.setLayout(jPanel2Layout);
-                jPanel2Layout.setHorizontalGroup(
-                        jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addGap(37, 37, 37)
-                                                .addComponent(jLabel1)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(lblSelectedNode))
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addGap(91, 91, 91)
-                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addComponent(btnManageAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(btnManageEnterprise, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(btnManageNetwork, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(manageCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(69, Short.MAX_VALUE))
-                );
-
-                jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnManageAdmin, btnManageEnterprise, btnManageNetwork});
-
-                jPanel2Layout.setVerticalGroup(
-                        jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(31, 31, 31)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(jLabel1)
-                                                        .addComponent(lblSelectedNode))
-                                                .addGap(54, 54, 54)
-                                                .addComponent(btnManageNetwork)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(btnManageEnterprise)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(btnManageAdmin)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(manageCustomer)))
-                                .addContainerGap(195, Short.MAX_VALUE))
-                );
+                jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Icons/opaquesysadmin.png"))); // NOI18N
+                jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 870, 570));
 
                 jSplitPane.setRightComponent(jPanel2);
 
@@ -244,13 +236,22 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_manageCustomerActionPerformed
 
+        private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+                // TODO add your handling code here:
+		 ViewStatisticJPanel viewstatsJPanel = new ViewStatisticJPanel(userProcessContainer, ecosystem);
+        userProcessContainer.add("viewstatsJPanel", viewstatsJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+        }//GEN-LAST:event_jButton1ActionPerformed
+
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
         private javax.swing.JButton btnManageAdmin;
         private javax.swing.JButton btnManageEnterprise;
         private javax.swing.JButton btnManageNetwork;
+        private javax.swing.JButton jButton1;
         private javax.swing.JLabel jLabel1;
-        private javax.swing.JLabel jLabel2;
+        private javax.swing.JLabel jLabel3;
         private javax.swing.JPanel jPanel1;
         private javax.swing.JPanel jPanel2;
         private javax.swing.JScrollPane jScrollPane1;

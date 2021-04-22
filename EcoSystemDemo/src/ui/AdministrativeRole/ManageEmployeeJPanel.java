@@ -8,6 +8,7 @@ import Business.Employee.Employee;
 import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
 import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -97,6 +98,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
 
                 addJButton.setBackground(new java.awt.Color(0, 102, 204));
                 addJButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+                addJButton.setForeground(new java.awt.Color(255, 255, 255));
                 addJButton.setText("Create Employee");
                 addJButton.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,6 +108,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
 
                 organizationJComboBox.setBackground(new java.awt.Color(0, 102, 204));
                 organizationJComboBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+                organizationJComboBox.setForeground(new java.awt.Color(255, 255, 255));
                 organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
                 organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,6 +131,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
 
                 organizationEmpJComboBox.setBackground(new java.awt.Color(0, 102, 204));
                 organizationEmpJComboBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+                organizationEmpJComboBox.setForeground(new java.awt.Color(255, 255, 255));
                 organizationEmpJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
                 jLabel3.setForeground(new java.awt.Color(0, 102, 204));
@@ -230,9 +234,6 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                                                 .addGap(32, 32, 32)
                                                 .addComponent(organizationJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(layout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
                                                 .addGap(18, 18, 18)
                                                 .addComponent(jLabel7)
                                                 .addGap(69, 69, 69)
@@ -277,7 +278,8 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                                                                                         .addComponent(organizationEmpJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                                         .addGroup(layout.createSequentialGroup()
                                                 .addContainerGap()
-                                                .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
                 layout.setVerticalGroup(
@@ -285,7 +287,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(5, 5, 5)
                                 .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(organizationJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel1))
@@ -338,6 +340,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         String name = nameJTextField.getText();
         
         organization.getEmployeeDirectory().createEmployee(name);
+	    JOptionPane.showMessageDialog(nameJTextField, "Employee Created");
         populateTable(organization);
         
     }//GEN-LAST:event_addJButtonActionPerformed

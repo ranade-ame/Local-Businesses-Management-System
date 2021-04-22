@@ -64,7 +64,6 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
                 tfUsername = new javax.swing.JTextField();
                 jLabel7 = new javax.swing.JLabel();
                 jLabel8 = new javax.swing.JLabel();
-                tfPassword = new javax.swing.JTextField();
                 btnCreate = new javax.swing.JButton();
                 backJButton = new javax.swing.JButton();
                 tfCountry = new javax.swing.JTextField();
@@ -74,6 +73,7 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
                 jLabel11 = new javax.swing.JLabel();
                 tfZipcode = new javax.swing.JTextField();
                 jLabel12 = new javax.swing.JLabel();
+                tfPassword = new javax.swing.JPasswordField();
 
                 setBackground(new java.awt.Color(255, 255, 255));
                 setPreferredSize(new java.awt.Dimension(621, 482));
@@ -138,14 +138,9 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
                 jLabel8.setForeground(new java.awt.Color(0, 102, 204));
                 jLabel8.setText("Password  :");
 
-                tfPassword.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                tfPasswordActionPerformed(evt);
-                        }
-                });
-
                 btnCreate.setBackground(new java.awt.Color(0, 102, 204));
                 btnCreate.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+                btnCreate.setForeground(new java.awt.Color(255, 255, 255));
                 btnCreate.setText("Create");
                 btnCreate.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -245,8 +240,8 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
                                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                                         .addComponent(btnCreate)
                                                                         .addComponent(tfPassword))))))
-                                .addGap(44, 44, 44)
-                                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+                                .addGap(134, 134, 134)
+                                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addContainerGap())
                 );
                 layout.setVerticalGroup(
@@ -254,9 +249,9 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                         .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -294,7 +289,7 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
                                                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addComponent(tfUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addGap(18, 18, 18)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGroup(layout.createSequentialGroup()
@@ -329,10 +324,6 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
     private void tfUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfUsernameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfUsernameActionPerformed
-
-    private void tfPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfPasswordActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
         userProcessContainer.remove(this);
@@ -426,7 +417,7 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
         private javax.swing.JTextField tfCountry;
         private javax.swing.JTextField tfEmail;
         private javax.swing.JTextField tfFullName;
-        private javax.swing.JTextField tfPassword;
+        private javax.swing.JPasswordField tfPassword;
         private javax.swing.JTextField tfPhoneNumber;
         private javax.swing.JTextField tfStreetAddress;
         private javax.swing.JTextField tfUsername;
