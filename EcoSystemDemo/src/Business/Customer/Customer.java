@@ -59,6 +59,10 @@ public class Customer {
         this.orderslist = orderslist;
     }
     
+    public void newOrderslist(){
+        this.orderslist = new ArrayList<Orders>();
+    }
+    
     public String getEmail() {
         return email;
     }

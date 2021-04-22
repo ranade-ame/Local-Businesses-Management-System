@@ -6,21 +6,27 @@
 package Business.Orders;
 
 import Business.ItemCatalogue.Items;
+//import com.github.javafaker.Faker;
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  *
  * @author ameya
  */
 public class Orders {
-    int orderID;
+//    Faker faker = new Faker();
+    private int orderID;
+    private String status;
     private String enterpriseName;
     private String customerName;
     private ArrayList<Items> orderlist;
     private int totalprice;
     private String customerAddress;
     private String enterpriseAddress;
-    int counter = 1000;
+    private String DeliveryManName;
+    private String DeliveryPhone;
+    
 
     public Orders(String enterpriseName, String customerName, ArrayList<Items> orderlist, int totalprice, String customerAddress, String enterpriseAddress) {
         this.enterpriseName = enterpriseName;
@@ -29,8 +35,30 @@ public class Orders {
         this.totalprice = totalprice;
         this.customerAddress = customerAddress;
         this.enterpriseAddress = enterpriseAddress;
-        this.orderID = counter;
-        counter++;
+        this.status = "New Order";
+        this.orderID = gen();//(int) faker.number().randomNumber(5, true);
+        
+    }
+    
+    public static int gen() {
+        Random r = new Random( System.currentTimeMillis() );
+        return ((1 + r.nextInt(2)) * 10000 + r.nextInt(10000));
+    }
+
+    public String getDeliveryPhone() {
+        return DeliveryPhone;
+    }
+
+    public void setDeliveryPhone(String DeliveryPhone) {
+        this.DeliveryPhone = DeliveryPhone;
+    }
+    
+    public String getDeliveryManName() {
+        return DeliveryManName;
+    }
+
+    public void setDeliveryManName(String DeliveryManName) {
+        this.DeliveryManName = DeliveryManName;
     }
 
     public int getOrderID() {
@@ -41,6 +69,14 @@ public class Orders {
         this.orderID = orderID;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
     public String getEnterpriseName() {
         return enterpriseName;
     }
