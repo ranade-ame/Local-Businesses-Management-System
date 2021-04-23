@@ -202,7 +202,7 @@ public class ModifyCustomerJPanel extends javax.swing.JPanel {
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                         .addComponent(btnCreate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                         .addComponent(tfZipcode, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE))))
-                                .addContainerGap(168, Short.MAX_VALUE))
+                                .addContainerGap(190, Short.MAX_VALUE))
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -333,6 +333,16 @@ public class ModifyCustomerJPanel extends javax.swing.JPanel {
         customer.setPhone(phone);
 
         JOptionPane.showMessageDialog(null, "Customer Profile Updated");
+	tfFullName.setText("");
+        tfPhoneNumber.setText("");
+        tfAge.setText("");
+        tfStreetAddress.setText("");
+        tfEmail.setText("");
+        tfCountry.setText("");
+        tfCity.setText("");
+        tfZipcode.setText("");
+	
+	
     }//GEN-LAST:event_btnCreateActionPerformed
 
     private void tfStreetAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfStreetAddressActionPerformed

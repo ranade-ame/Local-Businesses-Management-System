@@ -65,9 +65,6 @@ public class ViewOrdersJPanel extends javax.swing.JPanel {
 
                 jScrollPane5 = new javax.swing.JScrollPane();
                 orderJTable = new javax.swing.JTable();
-                jTextField1 = new javax.swing.JTextField();
-                jLabel1 = new javax.swing.JLabel();
-                jButton1 = new javax.swing.JButton();
                 btnAssignTransport = new javax.swing.JButton();
                 btnback = new javax.swing.JButton();
                 jLabel2 = new javax.swing.JLabel();
@@ -94,22 +91,6 @@ public class ViewOrdersJPanel extends javax.swing.JPanel {
                         }
                 });
                 jScrollPane5.setViewportView(orderJTable);
-
-                jTextField1.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                jTextField1ActionPerformed(evt);
-                        }
-                });
-
-                jLabel1.setForeground(new java.awt.Color(0, 102, 204));
-                jLabel1.setText("Total Amount");
-
-                jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Icons/file_light-07-512-2.png"))); // NOI18N
-                jButton1.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                jButton1ActionPerformed(evt);
-                        }
-                });
 
                 btnAssignTransport.setBackground(new java.awt.Color(0, 102, 204));
                 btnAssignTransport.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -156,58 +137,38 @@ public class ViewOrdersJPanel extends javax.swing.JPanel {
                 layout.setHorizontalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addGap(8, 8, 8)
-                                                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                .addComponent(jLabel1)
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING))
-                                                .addContainerGap())
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 6, Short.MAX_VALUE))
-                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
                                                 .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnAssignTransport)
-                                .addGap(188, 188, 188))
+                                                .addGap(442, 442, 442)
+                                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(263, 263, 263)
+                                                .addComponent(btnAssignTransport))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(32, 32, 32)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                        .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
+                                                        .addComponent(jScrollPane2))))
+                                .addContainerGap(52, Short.MAX_VALUE))
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
-                                                .addContainerGap()
+                                                .addGap(11, 11, 11)
                                                 .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addComponent(jLabel2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(6, 6, 6)
                                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                .addComponent(jLabel1)
-                                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(61, 61, 61)
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnAssignTransport)
-                                .addContainerGap(154, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addComponent(btnAssignTransport))
                 );
         }// </editor-fold>//GEN-END:initComponents
-
-        private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-                // TODO add your handling code here:
-        }//GEN-LAST:event_jTextField1ActionPerformed
 
         private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
             // TODO add your handling code here:
@@ -217,11 +178,6 @@ public class ViewOrdersJPanel extends javax.swing.JPanel {
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.previous(userProcessContainer);
         }//GEN-LAST:event_btnbackActionPerformed
-
-        private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-                // TODO add your handling code here:
-		JOptionPane.showMessageDialog(jButton1, "Order Confirmed!");
-        }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnAssignTransportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignTransportActionPerformed
         // TODO add your handling code here:
@@ -254,19 +210,13 @@ public class ViewOrdersJPanel extends javax.swing.JPanel {
                             order.setDeliveryPhone(org.getPhone());
                             if(enterprise.getInventoryOrderList() != null){
                                 enterprise.getInventoryOrderList().add(order);
-				JOptionPane.showMessageDialog(jButton1,"Transport service assigned");
+				JOptionPane.showMessageDialog(null,"Transport service assigned");
                             }
                             else{
                                 enterprise.newInvetoryOrdersList();
                                 enterprise.getInventoryOrderList().add(order);
-				JOptionPane.showMessageDialog(jButton1,"Transport service assigned");
-                                for(Orders o1 : enterprise.getInventoryOrderList()){
-                                    System.out.println("Order ID:" + o1.getOrderID());
-                                    System.out.println("Order Contents :\n");
-                                    for(Items i: o1.getOrderlist()){
-                                        System.out.println("Item Name :" + i.getName());
-                                    }
-                                }
+				JOptionPane.showMessageDialog(null,"Transport service assigned");
+                                
                             }
                         }
                     }
@@ -278,12 +228,9 @@ public class ViewOrdersJPanel extends javax.swing.JPanel {
         // Variables declaration - do not modify//GEN-BEGIN:variables
         private javax.swing.JButton btnAssignTransport;
         private javax.swing.JButton btnback;
-        private javax.swing.JButton jButton1;
-        private javax.swing.JLabel jLabel1;
         private javax.swing.JLabel jLabel2;
         private javax.swing.JScrollPane jScrollPane2;
         private javax.swing.JScrollPane jScrollPane5;
-        private javax.swing.JTextField jTextField1;
         private javax.swing.JTable orderJTable;
         private javax.swing.JTable transportJTable;
         // End of variables declaration//GEN-END:variables
