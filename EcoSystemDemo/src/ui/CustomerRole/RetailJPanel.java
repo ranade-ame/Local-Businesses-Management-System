@@ -44,9 +44,6 @@ public class RetailJPanel extends javax.swing.JPanel {
         // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
         private void initComponents() {
 
-                lblTitle = new javax.swing.JLabel();
-                jComboBox1 = new javax.swing.JComboBox<>();
-                lblSelectCategory = new javax.swing.JLabel();
                 lblAvailableStores = new javax.swing.JLabel();
                 jScrollPane1 = new javax.swing.JScrollPane();
                 retailJTable = new javax.swing.JTable();
@@ -55,21 +52,9 @@ public class RetailJPanel extends javax.swing.JPanel {
 
                 setBackground(new java.awt.Color(255, 255, 255));
 
-                lblTitle.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-                lblTitle.setForeground(new java.awt.Color(0, 102, 204));
-                lblTitle.setText("Please select required services from below");
-
-                jComboBox1.setBackground(new java.awt.Color(0, 102, 204));
-                jComboBox1.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-                jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Household Appliances", "Clothing", "Utensils", "Jewellery" }));
-
-                lblSelectCategory.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-                lblSelectCategory.setForeground(new java.awt.Color(0, 102, 204));
-                lblSelectCategory.setText("Select Category");
-
-                lblAvailableStores.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+                lblAvailableStores.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
                 lblAvailableStores.setForeground(new java.awt.Color(0, 102, 204));
-                lblAvailableStores.setText("Below are the nearest local services available for you   . . ");
+                lblAvailableStores.setText("Below are the nearest local services available for you ");
 
                 retailJTable.setModel(new javax.swing.table.DefaultTableModel(
                         new Object [][] {
@@ -83,6 +68,7 @@ public class RetailJPanel extends javax.swing.JPanel {
 
                 btnMenuDetails.setBackground(new java.awt.Color(0, 102, 204));
                 btnMenuDetails.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+                btnMenuDetails.setForeground(new java.awt.Color(255, 255, 255));
                 btnMenuDetails.setText("View Details");
                 btnMenuDetails.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,53 +87,33 @@ public class RetailJPanel extends javax.swing.JPanel {
                 this.setLayout(layout);
                 layout.setHorizontalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblAvailableStores)
-                                .addGap(159, 159, 159))
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(273, 273, 273)
-                                .addComponent(btnMenuDetails)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
+                                .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 646, Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
-                                                .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 0, Short.MAX_VALUE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 624, Short.MAX_VALUE)
-                                                .addContainerGap())
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addGap(0, 0, Short.MAX_VALUE)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                                .addComponent(lblTitle)
-                                                                .addGap(192, 192, 192))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(lblSelectCategory)
-                                                                .addGap(18, 18, 18)
-                                                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addGap(191, 191, 191))))))
+                                                .addGap(276, 276, 276)
+                                                .addComponent(btnMenuDetails))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(125, 125, 125)
+                                                .addComponent(lblAvailableStores)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(lblTitle)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(lblSelectCategory)
-                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
+                                .addGap(4, 4, 4)
                                 .addComponent(lblAvailableStores)
-                                .addGap(37, 37, 37)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
+                                .addGap(54, 54, 54)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnMenuDetails)
-                                .addGap(20, 20, 20))
+                                .addGap(84, 84, 84))
                 );
         }// </editor-fold>//GEN-END:initComponents
 
@@ -189,11 +155,8 @@ public class RetailJPanel extends javax.swing.JPanel {
         // Variables declaration - do not modify//GEN-BEGIN:variables
         private javax.swing.JButton backJButton;
         private javax.swing.JButton btnMenuDetails;
-        private javax.swing.JComboBox<String> jComboBox1;
         private javax.swing.JScrollPane jScrollPane1;
         private javax.swing.JLabel lblAvailableStores;
-        private javax.swing.JLabel lblSelectCategory;
-        private javax.swing.JLabel lblTitle;
         private javax.swing.JTable retailJTable;
         // End of variables declaration//GEN-END:variables
 

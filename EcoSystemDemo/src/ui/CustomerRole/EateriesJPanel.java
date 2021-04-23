@@ -68,6 +68,7 @@ public class EateriesJPanel extends javax.swing.JPanel {
 
                 btnMenuDetails.setBackground(new java.awt.Color(0, 102, 204));
                 btnMenuDetails.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+                btnMenuDetails.setForeground(new java.awt.Color(255, 255, 255));
                 btnMenuDetails.setText("View Menu Details");
                 btnMenuDetails.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {

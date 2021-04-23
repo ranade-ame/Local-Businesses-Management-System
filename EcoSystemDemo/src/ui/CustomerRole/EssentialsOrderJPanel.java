@@ -77,9 +77,11 @@ public class EssentialsOrderJPanel extends javax.swing.JPanel {
                 setBackground(new java.awt.Color(255, 255, 255));
 
                 enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+                enterpriseLabel.setForeground(new java.awt.Color(0, 102, 204));
                 enterpriseLabel.setText("Store Items");
 
                 enterpriseLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+                enterpriseLabel2.setForeground(new java.awt.Color(0, 102, 204));
                 enterpriseLabel2.setText("Cart Details");
 
                 cartJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -100,6 +102,9 @@ public class EssentialsOrderJPanel extends javax.swing.JPanel {
                 });
                 jScrollPane4.setViewportView(cartJTable);
 
+                btnAddtoCart.setBackground(new java.awt.Color(0, 102, 204));
+                btnAddtoCart.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+                btnAddtoCart.setForeground(new java.awt.Color(255, 255, 255));
                 btnAddtoCart.setText("Add Item to Cart");
                 btnAddtoCart.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,11 +162,6 @@ public class EssentialsOrderJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(116, 116, 116)
-                                                .addComponent(btnAddtoCart, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(btnRemovefromCart, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 624, Short.MAX_VALUE)
                                         .addComponent(jScrollPane4)
                                         .addGroup(layout.createSequentialGroup()
@@ -172,13 +172,21 @@ public class EssentialsOrderJPanel extends javax.swing.JPanel {
                                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGap(0, 0, Short.MAX_VALUE)
-                                                .addComponent(jLabel1)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jLabel1)
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                                .addComponent(btnRemovefromCart, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(20, 20, 20)))
                                                 .addGap(18, 18, 18)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(tfTotalPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addComponent(btnConfirmOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGroup(layout.createSequentialGroup()
-                                                .addComponent(enterpriseLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addGap(116, 116, 116)
+                                                                .addComponent(btnAddtoCart))
+                                                        .addComponent(enterpriseLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addGap(0, 0, Short.MAX_VALUE)))
                                 .addContainerGap())
                 );
@@ -194,19 +202,22 @@ public class EssentialsOrderJPanel extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(btnRemovefromCart, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(btnAddtoCart))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(enterpriseLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(50, 50, 50)
-                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel1)
-                                        .addComponent(tfTotalPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addComponent(btnConfirmOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(btnAddtoCart)
+                                                .addGap(27, 27, 27)
+                                                .addComponent(enterpriseLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(50, 50, 50)
+                                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(jLabel1)
+                                                        .addComponent(tfTotalPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnConfirmOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                .addComponent(btnRemovefromCart, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(28, 28, 28))
                 );
         }// </editor-fold>//GEN-END:initComponents
@@ -219,6 +230,7 @@ public class EssentialsOrderJPanel extends javax.swing.JPanel {
             }
             Items item = itemsdir.getItem(menuJTable.getValueAt(selectedMenuRow, 0).toString());
             orderItems.add(item);
+	    JOptionPane.showMessageDialog(cartJTable, "Item Added to cart");
             populateCartTable();
         }//GEN-LAST:event_btnAddtoCartActionPerformed
 
@@ -230,6 +242,7 @@ public class EssentialsOrderJPanel extends javax.swing.JPanel {
             }
             Items item = itemsdir.getItem(menuJTable.getValueAt(selectedCartRow, 0).toString());
             orderItems.remove(item);
+	    JOptionPane.showMessageDialog(cartJTable, "Item deleted from cart");
             populateCartTable();
         }//GEN-LAST:event_btnRemovefromCartActionPerformed
 
@@ -243,6 +256,7 @@ public class EssentialsOrderJPanel extends javax.swing.JPanel {
             orderplaced.add(order);
             customer.getOrderslist().add(order);
             enterprise.getOrders().add(order);
+	    JOptionPane.showMessageDialog(cartJTable, "Order Placed");
             //customer.setOrderslist(orderplaced);
         }//GEN-LAST:event_btnConfirmOrderActionPerformed
 

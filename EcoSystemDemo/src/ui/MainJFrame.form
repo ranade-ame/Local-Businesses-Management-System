@@ -33,8 +33,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="container" min="-2" max="-2" attributes="0"/>
+              <Component id="container" pref="160" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel3" max="32767" attributes="0"/>
           </Group>
@@ -47,8 +46,8 @@
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="container" max="32767" attributes="0"/>
                   <Component id="jPanel3" max="32767" attributes="0"/>
+                  <Component id="container" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -173,7 +172,7 @@
                           <Component id="btnNewRegister" min="-2" pref="132" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="0" pref="367" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -203,7 +202,7 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="btnNewRegister" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="140" max="32767" attributes="0"/>
+                  <EmptySpace pref="453" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

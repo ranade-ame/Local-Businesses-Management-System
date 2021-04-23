@@ -4,11 +4,13 @@
  */
 package ui.AdministrativeRole;
 
+import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.Organization.Organization.Type;
 import Business.Organization.OrganizationDirectory;
 import java.awt.CardLayout;
 import static java.lang.Integer.parseInt;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -20,25 +22,54 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
     private OrganizationDirectory directory;
     private JPanel userProcessContainer;
-    
+    private Enterprise enterprise;
     /**
      * Creates new form ManageOrganizationJPanel
      */
-    public ManageOrganizationJPanel(JPanel userProcessContainer,OrganizationDirectory directory) {
+    public ManageOrganizationJPanel(JPanel userProcessContainer,OrganizationDirectory directory, Enterprise enterprise) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.directory = directory;
-        
+        this.enterprise = enterprise;
         populateTable();
         populateCombo();
     }
     
     private void populateCombo(){
         organizationJComboBox.removeAllItems();
-        for (Type type : Organization.Type.values()){
-            if (!type.getValue().equals(Type.Admin.getValue()))
-                organizationJComboBox.addItem(type);
+//        for (Type type : Organization.Type.values()){
+//            if (!type.getValue().equals(Type.Admin.getValue()))
+//                organizationJComboBox.addItem(type);
+//        }
+            
+        if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Eateries")){
+            organizationJComboBox.addItem(Type.Delivery);
+            organizationJComboBox.addItem(Type.Transport);
+            organizationJComboBox.addItem(Type.Wholesale);
+
         }
+        else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Essentials")){
+            organizationJComboBox.addItem(Type.Delivery);
+            organizationJComboBox.addItem(Type.Transport);
+            organizationJComboBox.addItem(Type.Suppliers);
+
+        }
+        else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Retail")){
+            organizationJComboBox.addItem(Type.Delivery);
+            organizationJComboBox.addItem(Type.Transport);
+            organizationJComboBox.addItem(Type.Vendors);
+
+        }
+        else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Service")){
+            organizationJComboBox.addItem(Type.Cleaning);
+            organizationJComboBox.addItem(Type.Electrician);
+            organizationJComboBox.addItem(Type.Mechanic);
+            organizationJComboBox.addItem(Type.Plumbing);
+            organizationJComboBox.addItem(Type.Factories);
+
+        }
+        
+        
     }
 
     private void populateTable(){
@@ -127,6 +158,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
                 addJButton.setBackground(new java.awt.Color(0, 102, 204));
                 addJButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+                addJButton.setForeground(new java.awt.Color(255, 255, 255));
                 addJButton.setText("Add Organization");
                 addJButton.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,6 +168,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
                 organizationJComboBox.setBackground(new java.awt.Color(0, 102, 204));
                 organizationJComboBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+                organizationJComboBox.setForeground(new java.awt.Color(255, 255, 255));
                 organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
                 organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -255,19 +288,18 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
                                                                 .addGap(37, 37, 37)
                                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                                         .addGroup(layout.createSequentialGroup()
-                                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                        .addComponent(addJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                        .addComponent(organizationJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                                .addComponent(addJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                 .addGap(18, 18, 18)
                                                                                 .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                .addComponent(tfStreetAddress, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addComponent(tfCountry, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addComponent(tfCity, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addComponent(tfFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addComponent(tfZipcode, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addComponent(tfEmail, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addComponent(tfPhoneNumber, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                                                .addComponent(organizationJComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                                .addComponent(tfStreetAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                                                                                .addComponent(tfCountry, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                                                                                .addComponent(tfCity, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                                                                                .addComponent(tfFullName, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                                                                                .addComponent(tfZipcode, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                                                                                .addComponent(tfEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                                                                                .addComponent(tfPhoneNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)))))
                                                 .addGap(328, 328, Short.MAX_VALUE))))
                 );
                 layout.setVerticalGroup(
@@ -332,6 +364,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         String phone = tfPhoneNumber.getText();
         Type type = (Type) organizationJComboBox.getSelectedItem();
         directory.createOrganization(type, name, streetaddress, city, country, zipcode, emailaddress, phone);
+	JOptionPane.showMessageDialog(addJButton, "Organization Added!");
         populateTable();
     }//GEN-LAST:event_addJButtonActionPerformed
 
@@ -377,6 +410,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         String name = organizationJTable.getValueAt(selectedRow, 1).toString();
         Organization org = directory.getOrganization(name);
         directory.removeOrganization(org);
+	    JOptionPane.showMessageDialog(addJButton, "Selected Organization deleted");
         populateTable();
     }//GEN-LAST:event_btnDeleteActionPerformed
 
