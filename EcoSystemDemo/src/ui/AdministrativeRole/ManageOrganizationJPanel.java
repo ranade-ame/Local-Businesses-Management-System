@@ -4,6 +4,7 @@
  */
 package ui.AdministrativeRole;
 
+import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.Organization.Organization.Type;
 import Business.Organization.OrganizationDirectory;
@@ -21,25 +22,54 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
     private OrganizationDirectory directory;
     private JPanel userProcessContainer;
-    
+    private Enterprise enterprise;
     /**
      * Creates new form ManageOrganizationJPanel
      */
-    public ManageOrganizationJPanel(JPanel userProcessContainer,OrganizationDirectory directory) {
+    public ManageOrganizationJPanel(JPanel userProcessContainer,OrganizationDirectory directory, Enterprise enterprise) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.directory = directory;
-        
+        this.enterprise = enterprise;
         populateTable();
         populateCombo();
     }
     
     private void populateCombo(){
         organizationJComboBox.removeAllItems();
-        for (Type type : Organization.Type.values()){
-            if (!type.getValue().equals(Type.Admin.getValue()))
-                organizationJComboBox.addItem(type);
+//        for (Type type : Organization.Type.values()){
+//            if (!type.getValue().equals(Type.Admin.getValue()))
+//                organizationJComboBox.addItem(type);
+//        }
+            
+        if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Eateries")){
+            organizationJComboBox.addItem(Type.Delivery);
+            organizationJComboBox.addItem(Type.Transport);
+            organizationJComboBox.addItem(Type.Wholesale);
+
         }
+        else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Essentials")){
+            organizationJComboBox.addItem(Type.Delivery);
+            organizationJComboBox.addItem(Type.Transport);
+            organizationJComboBox.addItem(Type.Suppliers);
+
+        }
+        else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Retail")){
+            organizationJComboBox.addItem(Type.Delivery);
+            organizationJComboBox.addItem(Type.Transport);
+            organizationJComboBox.addItem(Type.Vendors);
+
+        }
+        else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Service")){
+            organizationJComboBox.addItem(Type.Cleaning);
+            organizationJComboBox.addItem(Type.Electrician);
+            organizationJComboBox.addItem(Type.Mechanic);
+            organizationJComboBox.addItem(Type.Plumbing);
+            organizationJComboBox.addItem(Type.Factories);
+
+        }
+        
+        
     }
 
     private void populateTable(){

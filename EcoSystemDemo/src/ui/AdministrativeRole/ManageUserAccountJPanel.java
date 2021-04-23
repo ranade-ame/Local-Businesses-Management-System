@@ -69,7 +69,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
                 Object row[] = new Object[2];
                 row[0] = ua;
-                row[1] = ua.getRole();
+                row[1] = organization.getType();
                 ((DefaultTableModel) userJTable.getModel()).addRow(row);
             }
         }
@@ -239,13 +239,19 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         String userName = nameJTextField.getText();
         String password = passwordJTextField.getText();
         Organization organization = (Organization) organizationJComboBox.getSelectedItem();
-        //Employee employee = (Employee) employeeJComboBox.getSelectedItem();
-        Role role = (Role) roleJComboBox.getSelectedItem();
-        
-        organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
-	    JOptionPane.showMessageDialog(roleJComboBox, "User Added successfully!");
-        
-        popData();
+        boolean flag = organization.getUserAccountDirectory().checkIfUsernameIsUnique(userName);
+        if(flag == false){
+            JOptionPane.showMessageDialog(roleJComboBox, "User name already exists");
+        }
+        else{
+            //Employee employee = (Employee) employeeJComboBox.getSelectedItem();
+            Role role = (Role) roleJComboBox.getSelectedItem();
+
+            organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
+                JOptionPane.showMessageDialog(roleJComboBox, "User Added successfully!");
+
+            popData();
+        }
     }//GEN-LAST:event_createUserJButtonActionPerformed
 
     private void backjButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backjButton1ActionPerformed

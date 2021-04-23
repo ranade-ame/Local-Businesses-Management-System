@@ -204,11 +204,23 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         }// </editor-fold>//GEN-END:initComponents
 
         private void btnViewOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewOrderActionPerformed
-                // TODO add your handling code here:
-		ViewOrdersJPanel viewordersJPanel = new ViewOrdersJPanel(userProcessContainer, enterprise);
-        userProcessContainer.add("viewordersJPanel", viewordersJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+            // TODO add your handling code here:
+            int selectedOrderRow = orderJTable.getSelectedRow();
+            if(selectedOrderRow<0){
+                JOptionPane.showMessageDialog(null,"Select an order","Warning",JOptionPane.WARNING_MESSAGE);
+            }
+            int orderID = (int) orderJTable.getValueAt(selectedOrderRow, 0);
+            Orders order = null;
+            
+            for(Orders o : enterprise.getOrders()){
+                if(o.getOrderID() == orderID){
+                    order = o;
+                }
+            }
+            ViewOrdersJPanel viewordersJPanel = new ViewOrdersJPanel(userProcessContainer, enterprise, order);
+            userProcessContainer.add("viewordersJPanel", viewordersJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
                 
         }//GEN-LAST:event_btnViewOrderActionPerformed
 
