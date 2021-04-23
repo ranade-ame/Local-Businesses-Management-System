@@ -59,16 +59,13 @@ public class DeliveryWorkAreaJPanel extends javax.swing.JPanel {
                 jLabel1 = new javax.swing.JLabel();
 
                 setBackground(new java.awt.Color(255, 255, 255));
-                setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
                 enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
                 enterpriseLabel.setForeground(new java.awt.Color(0, 102, 204));
                 enterpriseLabel.setText("Hi");
-                add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
                 valueLabel.setForeground(new java.awt.Color(0, 102, 204));
                 valueLabel.setText("<value>");
-                add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
                 orderJTable.setForeground(new java.awt.Color(0, 102, 204));
                 orderJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -96,8 +93,6 @@ public class DeliveryWorkAreaJPanel extends javax.swing.JPanel {
                 });
                 jScrollPane1.setViewportView(orderJTable);
 
-                add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 674, 120));
-
                 btnRefresh.setBackground(new java.awt.Color(0, 102, 204));
                 btnRefresh.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
                 btnRefresh.setForeground(new java.awt.Color(255, 255, 255));
@@ -107,7 +102,6 @@ public class DeliveryWorkAreaJPanel extends javax.swing.JPanel {
                                 btnRefreshActionPerformed(evt);
                         }
                 });
-                add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(141, 206, -1, -1));
 
                 btnOrderPicked.setBackground(new java.awt.Color(0, 102, 204));
                 btnOrderPicked.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -118,7 +112,6 @@ public class DeliveryWorkAreaJPanel extends javax.swing.JPanel {
                                 btnOrderPickedActionPerformed(evt);
                         }
                 });
-                add(btnOrderPicked, new org.netbeans.lib.awtextra.AbsoluteConstraints(262, 206, 116, -1));
 
                 btnDelivered.setBackground(new java.awt.Color(0, 102, 204));
                 btnDelivered.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -129,10 +122,52 @@ public class DeliveryWorkAreaJPanel extends javax.swing.JPanel {
                                 btnDeliveredActionPerformed(evt);
                         }
                 });
-                add(btnDelivered, new org.netbeans.lib.awtextra.AbsoluteConstraints(404, 206, -1, -1));
 
                 jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Icons/delivery (2).png"))); // NOI18N
-                add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 550, 130));
+
+                javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+                this.setLayout(layout);
+                layout.setHorizontalGroup(
+                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(enterpriseLabel)
+                                                .addGap(5, 5, 5)
+                                                .addComponent(valueLabel))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(30, 30, 30)
+                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(141, 141, 141)
+                                                .addComponent(btnRefresh)
+                                                .addGap(48, 48, 48)
+                                                .addComponent(btnOrderPicked, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(26, 26, 26)
+                                                .addComponent(btnDelivered))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(60, 60, 60)
+                                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(82, Short.MAX_VALUE))
+                );
+                layout.setVerticalGroup(
+                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(enterpriseLabel)
+                                        .addComponent(valueLabel))
+                                .addGap(33, 33, 33)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(16, 16, 16)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(btnRefresh)
+                                        .addComponent(btnOrderPicked)
+                                        .addComponent(btnDelivered))
+                                .addGap(43, 43, 43)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                );
         }// </editor-fold>//GEN-END:initComponents
 
         private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed

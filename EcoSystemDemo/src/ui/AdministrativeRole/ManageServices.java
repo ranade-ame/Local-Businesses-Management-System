@@ -58,12 +58,10 @@ public class ManageServices extends javax.swing.JPanel {
                 btnRefresh = new javax.swing.JButton();
 
                 setBackground(new java.awt.Color(255, 255, 255));
-                setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
                 jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
                 jLabel4.setForeground(new java.awt.Color(0, 102, 204));
                 jLabel4.setText("Avaiable Services");
-                add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(243, 22, -1, -1));
 
                 btnBack.setBackground(new java.awt.Color(255, 255, 255));
                 btnBack.setForeground(new java.awt.Color(240, 240, 240));
@@ -73,7 +71,6 @@ public class ManageServices extends javax.swing.JPanel {
                                 btnBackActionPerformed(evt);
                         }
                 });
-                add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 50));
 
                 serviceJTable.setModel(new javax.swing.table.DefaultTableModel(
                         new Object [][] {
@@ -88,8 +85,6 @@ public class ManageServices extends javax.swing.JPanel {
                 ));
                 jScrollPane1.setViewportView(serviceJTable);
 
-                add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 620, 170));
-
                 btnRefresh.setBackground(new java.awt.Color(0, 102, 204));
                 btnRefresh.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
                 btnRefresh.setForeground(new java.awt.Color(255, 255, 255));
@@ -99,7 +94,37 @@ public class ManageServices extends javax.swing.JPanel {
                                 btnRefreshActionPerformed(evt);
                         }
                 });
-                add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(427, 74, 114, -1));
+
+                javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+                this.setLayout(layout);
+                layout.setHorizontalGroup(
+                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(layout.createSequentialGroup()
+                                                        .addGap(90, 90, 90)
+                                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(312, 312, 312)
+                                                .addComponent(jLabel4)))
+                                .addGap(90, 90, 90))
+                );
+                layout.setVerticalGroup(
+                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(11, 11, 11)
+                                .addComponent(jLabel4)
+                                .addGap(37, 37, 37)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnRefresh))
+                );
         }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
