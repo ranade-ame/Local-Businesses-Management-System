@@ -79,35 +79,46 @@ public class SuppliersWorkAreaJPanel extends javax.swing.JPanel {
                 menuJTable = new javax.swing.JTable();
 
                 setBackground(new java.awt.Color(255, 255, 255));
+                setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
                 jLabel1.setForeground(new java.awt.Color(0, 102, 204));
                 jLabel1.setText("Add Items to available list");
+                add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 41, -1, -1));
 
                 jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Icons/suppliericon (1).png"))); // NOI18N
+                add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(493, 25, 240, 230));
 
                 jLabel5.setForeground(new java.awt.Color(0, 102, 204));
                 jLabel5.setText("Quantity :");
+                add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 221, -1, 20));
 
                 tfQuantity.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 tfQuantityActionPerformed(evt);
                         }
                 });
+                add(tfQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(355, 221, 107, -1));
+                add(tfItemName, new org.netbeans.lib.awtextra.AbsoluteConstraints(355, 107, 107, -1));
 
                 jLabel7.setForeground(new java.awt.Color(0, 102, 204));
                 jLabel7.setText("Item Name:");
+                add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 107, -1, 20));
 
                 jLabel2.setForeground(new java.awt.Color(0, 102, 204));
                 jLabel2.setText("Item Description:");
+                add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 133, -1, 20));
+                add(tfItemDescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(355, 145, 107, -1));
 
                 tfPrice.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 tfPriceActionPerformed(evt);
                         }
                 });
+                add(tfPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(355, 183, 107, -1));
 
                 jLabel3.setForeground(new java.awt.Color(0, 102, 204));
                 jLabel3.setText("Price:");
+                add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 177, -1, 20));
 
                 btnDelete.setBackground(new java.awt.Color(255, 255, 255));
                 btnDelete.setForeground(new java.awt.Color(240, 240, 240));
@@ -118,6 +129,7 @@ public class SuppliersWorkAreaJPanel extends javax.swing.JPanel {
                                 btnDeleteActionPerformed(evt);
                         }
                 });
+                add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 275, 77, -1));
 
                 btnViewOrders.setBackground(new java.awt.Color(0, 102, 204));
                 btnViewOrders.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -128,6 +140,7 @@ public class SuppliersWorkAreaJPanel extends javax.swing.JPanel {
                                 btnViewOrdersActionPerformed(evt);
                         }
                 });
+                add(btnViewOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(257, 299, -1, -1));
 
                 btnAddItem.setBackground(new java.awt.Color(0, 102, 204));
                 btnAddItem.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -138,6 +151,7 @@ public class SuppliersWorkAreaJPanel extends javax.swing.JPanel {
                                 btnAddItemActionPerformed(evt);
                         }
                 });
+                add(btnAddItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 299, -1, -1));
 
                 menuJTable.setModel(new javax.swing.table.DefaultTableModel(
                         new Object [][] {
@@ -157,94 +171,7 @@ public class SuppliersWorkAreaJPanel extends javax.swing.JPanel {
                 });
                 jScrollPane5.setViewportView(menuJTable);
 
-                javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-                this.setLayout(layout);
-                layout.setHorizontalGroup(
-                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(135, 135, 135)
-                                .addComponent(btnAddItem)
-                                .addGap(33, 33, 33)
-                                .addComponent(btnViewOrders)
-                                .addGap(43, 43, 43)
-                                .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(68, 68, 68)
-                                                .addComponent(jLabel1)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(jLabel7)
-                                                                .addGap(82, 82, 82)
-                                                                .addComponent(tfItemName, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(jLabel2)
-                                                                .addGap(54, 54, 54)
-                                                                .addComponent(tfItemDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(jLabel3)
-                                                                .addGap(115, 115, 115)
-                                                                .addComponent(tfPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(jLabel5)
-                                                                .addGap(92, 92, 92)
-                                                                .addComponent(tfQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                .addGap(18, 18, 18)))
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())
-                        .addComponent(jScrollPane5)
-                );
-                layout.setVerticalGroup(
-                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(41, 41, 41)
-                                                .addComponent(jLabel1)
-                                                .addGap(31, 31, 31)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addGap(3, 3, 3)
-                                                                .addComponent(jLabel7))
-                                                        .addComponent(tfItemName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(18, 18, 18)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addGap(3, 3, 3)
-                                                                .addComponent(jLabel2))
-                                                        .addComponent(tfItemDescription, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(18, 18, 18)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addGap(3, 3, 3)
-                                                                .addComponent(jLabel3))
-                                                        .addComponent(tfPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(18, 18, 18)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addGap(3, 3, 3)
-                                                                .addComponent(jLabel5))
-                                                        .addComponent(tfQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(16, 16, 16)
-                                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(btnDelete)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(24, 24, 24)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(btnAddItem)
-                                                        .addComponent(btnViewOrders))))
-                                .addGap(28, 28, 28)
-                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33))
-                );
+                add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 720, 118));
         }// </editor-fold>//GEN-END:initComponents
 
     private void tfQuantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfQuantityActionPerformed
@@ -284,6 +211,10 @@ public class SuppliersWorkAreaJPanel extends javax.swing.JPanel {
         int itemQuantity = parseInt(tfQuantity.getText());
         Items item = itemsdir.addItem(itemName, itemDesc, itemPrice, itemQuantity);
 	JOptionPane.showMessageDialog(jScrollPane5, "Item added to list");
+	tfItemName.setText("");
+	tfItemDescription.setText("");
+	tfPrice.setText("");
+	tfQuantity.setText("");
         populateTable();
     }//GEN-LAST:event_btnAddItemActionPerformed
 

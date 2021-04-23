@@ -233,7 +233,7 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
 
         private void btnyourordersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnyourordersActionPerformed
             // TODO add your handling code here:
-            YourOrdersJPanel yourordersJPanel = new YourOrdersJPanel(userProcessContainer, ecosystem, customer);
+            YourOrdersJPanel yourordersJPanel = new YourOrdersJPanel(userProcessContainer, ecosystem, customer, enterprise);
             userProcessContainer.add("yourordersJPanel", yourordersJPanel);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);	

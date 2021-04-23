@@ -7,9 +7,11 @@ package ui.CustomerRole;
 
 import Business.Customer.Customer;
 import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
 import Business.Orders.Orders;
 import java.awt.CardLayout;
 import java.awt.Component;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -25,10 +27,12 @@ public class YourOrdersJPanel extends javax.swing.JPanel {
 	private JPanel userProcessContainer;
         private EcoSystem ecosystem;
         private Customer customer;
-	public YourOrdersJPanel(JPanel userProcessContainer, EcoSystem ecosystem, Customer customer) {
+        private Enterprise enterprise;
+	public YourOrdersJPanel(JPanel userProcessContainer, EcoSystem ecosystem, Customer customer, Enterprise enterprise) {
             this.userProcessContainer = userProcessContainer;
             this.ecosystem = ecosystem;
             this.customer = customer;
+            this.enterprise = enterprise;
             initComponents();
             populateOrdersTable();
 	}
@@ -46,16 +50,17 @@ public class YourOrdersJPanel extends javax.swing.JPanel {
                 ordersJTable = new javax.swing.JTable();
                 jButton1 = new javax.swing.JButton();
                 jLabel1 = new javax.swing.JLabel();
+                btnViewOrder = new javax.swing.JButton();
 
                 setBackground(new java.awt.Color(255, 255, 255));
 
                 ordersJTable.setModel(new javax.swing.table.DefaultTableModel(
                         new Object [][] {
-                                {null, null, null, null, null},
-                                {null, null, null, null, null}
+                                {null, null, null, null, null, null},
+                                {null, null, null, null, null, null}
                         },
                         new String [] {
-                                "Enterprise Name", "Address", "ZipCode", "Amount", "Status"
+                                "Order ID", "Enterprise Name", "Address", "ZipCode", "Amount", "Status"
                         }
                 ));
                 jScrollPane1.setViewportView(ordersJTable);
@@ -69,31 +74,47 @@ public class YourOrdersJPanel extends javax.swing.JPanel {
 
                 jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Icons/manager128x.png"))); // NOI18N
 
+                btnViewOrder.setBackground(new java.awt.Color(0, 102, 204));
+                btnViewOrder.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+                btnViewOrder.setForeground(new java.awt.Color(255, 255, 255));
+                btnViewOrder.setText("View Order");
+                btnViewOrder.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btnViewOrderActionPerformed(evt);
+                        }
+                });
+
                 javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
                 this.setLayout(layout);
                 layout.setHorizontalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 655, Short.MAX_VALUE)
                         .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(10, 10, 10)
+                                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(587, 587, 587)
+                                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(layout.createSequentialGroup()
-                                                .addGap(207, 207, 207)
-                                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addGap(30, 30, 30)
+                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 740, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(350, 350, 350)
+                                                .addComponent(btnViewOrder)))
+                                .addContainerGap(21, Short.MAX_VALUE))
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(11, 11, 11)
+                                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(10, 10, 10)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
-                                .addGap(16, 16, 16))
+                                .addGap(11, 11, 11)
+                                .addComponent(btnViewOrder))
                 );
         }// </editor-fold>//GEN-END:initComponents
 
@@ -107,8 +128,29 @@ public class YourOrdersJPanel extends javax.swing.JPanel {
             layout.previous(userProcessContainer);
         }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void btnViewOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewOrderActionPerformed
+        // TODO add your handling code here:
+        int selectedOrderRow = ordersJTable.getSelectedRow();
+        if(selectedOrderRow<0){
+            JOptionPane.showMessageDialog(null,"Select an order","Warning",JOptionPane.WARNING_MESSAGE);
+        }
+        int orderID = (int) ordersJTable.getValueAt(selectedOrderRow, 0);
+        Orders order = null;
+
+        for(Orders o : customer.getOrderslist()){
+            if(o.getOrderID() == orderID){
+                order = o;
+            }
+        }
+        ViewOrdersJPanel viewordersJPanel = new ViewOrdersJPanel(userProcessContainer, order);
+        userProcessContainer.add("viewordersJPanel", viewordersJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnViewOrderActionPerformed
+
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
+        private javax.swing.JButton btnViewOrder;
         private javax.swing.JButton jButton1;
         private javax.swing.JLabel jLabel1;
         private javax.swing.JScrollPane jScrollPane1;
@@ -120,10 +162,12 @@ public class YourOrdersJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
         for(Orders o : customer.getOrderslist()){
             Object[] row = new Object[6];
-            row[0] = o.getEnterpriseName();
-            row[1] = o.getCustomerAddress();
-            row[2] = customer.getZipcode();
-            row[3] = o.getTotalprice();
+            row[0] = o.getOrderID();
+            row[1] = o.getEnterpriseName();
+            row[2] = o.getCustomerAddress();
+            row[3] = customer.getZipcode();
+            row[4] = o.getTotalprice();
+            row[5] = o.getStatus();
             model.addRow(row);
         }
     }

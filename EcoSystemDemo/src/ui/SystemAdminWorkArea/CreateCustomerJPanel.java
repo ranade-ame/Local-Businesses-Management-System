@@ -362,15 +362,16 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
             return;
         }
         
+        
        
-//        String email = tfEmail.getText();
-//        boolean flag;
-//        flag = email.matches("^[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]+$");
-//        
-//        if(!flag) {
-//            JOptionPane.showMessageDialog(null, "Email Address must be in format of username@email.com");
-//            return;
-//        }
+        String email = tfEmail.getText();
+        boolean flag1;
+        flag1 = email.matches("^[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]+$");
+        
+        if(!flag1) {
+            JOptionPane.showMessageDialog(null, "Email Address must be in format of username@email.com");
+            return;
+        }
 
         for(Customer customer : ecosystem.getCustomerdirectory().getCustomerDir()) {
             if(customer.getEmail().equals(emailaddress)) {
@@ -378,10 +379,26 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
             }
         }
         
-        ecosystem.getCustomerdirectory().newCustomer(name, phone, age, streetaddress, emailaddress, username, password, country, city, zipcode);
-        ecosystem.getUserAccountDirectory().createUserAccount(username, password, employee, new CustomerRole());
-        JOptionPane.showMessageDialog(null,"Customer Created");
-        
+        boolean flag = ecosystem.getUserAccountDirectory().checkIfUsernameIsUnique(username);
+        if(flag == false){
+            JOptionPane.showMessageDialog(null, "User name already exists");
+        }
+        else{
+            ecosystem.getCustomerdirectory().newCustomer(name, phone, age, streetaddress, emailaddress, username, password, country, city, zipcode);
+            ecosystem.getUserAccountDirectory().createUserAccount(username, password, employee, new CustomerRole());
+            JOptionPane.showMessageDialog(null,"Customer Created");
+        }
+	tfFullName.setText("");
+        tfPhoneNumber.setText("");
+        tfAge.setText("");
+        tfStreetAddress.setText("");
+        tfEmail.setText("");
+        tfCountry.setText("");
+        tfCity.setText("");
+        tfZipcode.setText("");
+        tfUsername.setText("");
+       tfPassword.setText("");
+	
     }//GEN-LAST:event_btnCreateActionPerformed
 
     private void tfCountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCountryActionPerformed

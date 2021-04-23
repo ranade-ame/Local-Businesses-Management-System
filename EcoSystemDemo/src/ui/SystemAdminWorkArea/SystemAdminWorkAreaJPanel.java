@@ -30,7 +30,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.ecosystem=ecosystem;
-        //populateTree();
+        populateTree();
     }
     
     public void populateTree(){
@@ -52,22 +52,21 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         DefaultMutableTreeNode enterpriseNode;
         DefaultMutableTreeNode organizationNode;
         
-        for(int i=0;i<networkList.size();i++){
-            network=networkList.get(i);
-            networkNode=new DefaultMutableTreeNode(network.getName());
+        int i = 0;
+        for(Network n : ecosystem.getNetworkList()){
+            networkNode = new DefaultMutableTreeNode(n.getName());
             networks.insert(networkNode, i);
-            
-            enterpriseList=network.getEnterpriseDirectory().getEnterpriseList();
-            for(int j=0; j<enterpriseList.size();j++){
-                enterprise=enterpriseList.get(j);
-                enterpriseNode=new DefaultMutableTreeNode(enterprise.getName());
+            i++;
+            int j = 0;
+            for(Enterprise e : n.getEnterpriseDirectory().getEnterpriseList()){
+                enterpriseNode = new DefaultMutableTreeNode(e.getName());
                 networkNode.insert(enterpriseNode, j);
-                
-                organizationList=enterprise.getOrganizationDirectory().getOrganizationList();
-                for(int k=0;k<organizationList.size();k++){
-                    organization=organizationList.get(i);
-                    organizationNode=new DefaultMutableTreeNode(organization.getName());
+                j++;
+                int k = 0;
+                for(Organization o : e.getOrganizationDirectory().getOrganizationList()){
+                    organizationNode = new DefaultMutableTreeNode(o.getName());
                     enterpriseNode.insert(organizationNode, k);
+                    k++;
                 }
             }
         }
