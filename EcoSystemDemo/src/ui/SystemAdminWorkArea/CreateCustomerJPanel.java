@@ -297,7 +297,7 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
                         .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCreate)
-                .addGap(0, 63, Short.MAX_VALUE))
+                .addGap(0, 83, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

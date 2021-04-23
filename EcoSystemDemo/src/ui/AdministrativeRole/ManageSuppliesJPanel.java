@@ -277,6 +277,9 @@ public class ManageSuppliesJPanel extends javax.swing.JPanel {
 
         private void btnAddtoCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddtoCartActionPerformed
             // TODO add your handling code here:
+            if(tfQuantity.getText() == null ){
+                JOptionPane.showMessageDialog(null,"Enter Quantity","Warning",JOptionPane.WARNING_MESSAGE);
+            }
             int selectedMenuRow = menuJTable.getSelectedRow();
             if(selectedMenuRow<0){
                 JOptionPane.showMessageDialog(null,"Select a row","Warning",JOptionPane.WARNING_MESSAGE);
@@ -374,6 +377,11 @@ public class ManageSuppliesJPanel extends javax.swing.JPanel {
             }
             else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Retail")){
                 if(o.getType().equalsIgnoreCase("Vendors")){
+                    organizationJComboBox.addItem(o.getName());
+                }
+            }
+            else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Service")){
+                if(o.getType().equalsIgnoreCase("Factories")){
                     organizationJComboBox.addItem(o.getName());
                 }
             }
