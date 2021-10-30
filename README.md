@@ -12,4 +12,33 @@ Local retail stores such as clothing, electronics and hardware are also affected
 Regarding the Covid-19 pandemic, the delivery men of companies such as Amazon or Door dash can become potential spreaders of the virus due to the large number of interactions they have with people in different areas. This creates a health hazard not only for those employed by large corporations to deliver products, but also to the communities where the deliveries take place
 To do this, we have identified the types of small and micro enterprises that constitute local and small business and categorized them as follows:
 
+![image](https://user-images.githubusercontent.com/78456439/139558404-590500e9-0e4b-42c1-af83-6dd59eab4b0b.png)
+
+Solution:
+
+We have designed and developed an ecosystem which can work not only in Major Cities but also Small Cities. We have 5 zip codes for three cities, multiple zip codes for Boston and 2 for Indian cities: Pune which is major city and Aurangabad is a small city.
+This demonstrates the robustness of our project.
+
+![image](https://user-images.githubusercontent.com/78456439/139558412-74d8e275-95ae-4b19-9b8a-99b427a78e9c.png)
+
+Screenshots:
+
+![image](https://user-images.githubusercontent.com/78456439/139558415-0f1abdda-6821-4c27-bc48-bf31422b97f2.png)
+
+![image](https://user-images.githubusercontent.com/78456439/139558419-1d136e48-151e-4beb-9cd8-6de8e7418588.png)
+
+![image](https://user-images.githubusercontent.com/78456439/139558422-4d2bd538-a303-4b20-875c-1910635095ba.png)
+
+![image](https://user-images.githubusercontent.com/78456439/139558425-6735e19d-f60d-4029-8d52-b2afc3ee04e5.png)
+
+![image](https://user-images.githubusercontent.com/78456439/139558433-8cfb0f27-f674-4d59-ba0b-592f24baa6fc.png)
+
+![image](https://user-images.githubusercontent.com/78456439/139558438-7f6059a1-3f49-4f78-aafe-2d03fdeb9f69.png)
+
+![image](https://user-images.githubusercontent.com/78456439/139558443-f6704a08-f4bb-4f3a-af0d-fe777d8e674b.png)
+
+![image](https://user-images.githubusercontent.com/78456439/139558446-1db14175-23b6-499b-861e-c62d895aeaef.png)
+
+
+
 
